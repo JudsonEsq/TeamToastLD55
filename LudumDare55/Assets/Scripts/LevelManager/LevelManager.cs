@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -40,12 +41,29 @@ public class LevelManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
         else
         {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+        }
+    }
+
+    private void Start()
+    {
+        // For Testing purposes
+        // if you start on a playable level, set the correct index
+        if (Instance == this)
+        {
+            var currentScene = SceneManager.GetActiveScene();
+            if (playableLevels.Count == 0) return;
+
+            var scene = playableLevels.Find(x => x.name == currentScene.name);
+            if (scene)
+            {
+                currentPlayableLevel = playableLevels.IndexOf(scene);
+            }
         }
     }
 
