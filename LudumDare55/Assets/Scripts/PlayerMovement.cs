@@ -38,8 +38,8 @@ public class PlayerMovement : MonoBehaviour
     [FormerlySerializedAs("orientation")]
     public Transform Orientation;
 
-    float _horizontalInput;
-    float _verticalInput;
+    public float HorizontalInput;
+    public float VerticalInput;
 
     Vector3 _moveDirection;
     Rigidbody _rb;
@@ -75,8 +75,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void MyInput()
     {
-        _horizontalInput = Input.GetAxisRaw("Horizontal Movement");
-        _verticalInput = Input.GetAxisRaw("Vertical Movement");
+        HorizontalInput = Input.GetAxisRaw("Horizontal Movement");
+        VerticalInput = Input.GetAxisRaw("Vertical Movement");
 
         // when to jump
         if(Input.GetKey(JumpKey) && _readyToJump && _grounded)
@@ -91,7 +91,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void MovePlayer () {
         // calculate movement direction
-        _moveDirection = GetWishDirection(new Vector2(_horizontalInput, _verticalInput));
+        _moveDirection = GetWishDirection(new Vector2(HorizontalInput, VerticalInput));
 
 
         if (_moveDirection != Vector3.zero) {
