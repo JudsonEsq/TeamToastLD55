@@ -1252,8 +1252,8 @@ MonoBehaviour:
     m_Bits: 64
   CameraController: {fileID: 1064478279}
   MinimumObjectDistance: 1
-  MinimumObjectDistanceMoving: 6.5
-  MaximumGrabDistance: 50
+  MinimumObjectDistanceMoving: 1.5
+  MaximumGrabDistance: 25
   Multiplier: 1
   DeltaTimeMultiplier: 0.3
   _grabbedRigidbody: {fileID: 0}
@@ -1299,6 +1299,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   Orientation: {fileID: 1064478278}
+  HorizontalInput: 0
+  VerticalInput: 0
   CameraController: {fileID: 1064478279}
 --- !u!136 &1064478282
 CapsuleCollider:

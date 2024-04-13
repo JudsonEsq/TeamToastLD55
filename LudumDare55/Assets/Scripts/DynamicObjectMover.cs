@@ -86,7 +86,7 @@ public class DynamicObjectMover : MonoBehaviour {
 	int _frames;
 	public ObjectGrabbed OnObjectGrabbed;
 	public ObjectReleased OnObjectReleased;
-
+	PlayerMovement _movement;
 	public delegate void ObjectGrabbed (GameObject obj);
 
 	public delegate void ObjectReleased (GameObject obj);
@@ -95,7 +95,7 @@ public class DynamicObjectMover : MonoBehaviour {
 	#region Unity Update Loop
 
 	void Start () {
-
+		_movement = GetComponent<PlayerMovement>();
 		// we sub the before refresh event so that we can release the object and then
 		// have it set its position and velocity and have that velocity and position be unmodified
 		CameraController = CameraController.Instance;
@@ -116,7 +116,14 @@ public class DynamicObjectMover : MonoBehaviour {
 			// Calculate object's center position based on the offset we stored
 			// NOTE: We need to convert the local-space point back to world coordinates
 			// Get the destination point for the point on the object we grabbed
-			Vector3 holdPoint = ray.GetPoint(_currentGrabDistance);
+			float actualGrabDistance = _currentGrabDistance;
+			
+			// get the forward vector of the player
+			float forward = _movement.VerticalInput;
+			if (forward == 1) {
+				actualGrabDistance = MinimumObjectDistanceMoving;
+			}
+			Vector3 holdPoint = ray.GetPoint(actualGrabDistance);
 			Vector3 centerDestination = holdPoint; // - _grabbedTransform.TransformVector(_hitOffsetLocal);
 			centerDestination.y -= _collider.bounds.size.y/2;
 
@@ -284,7 +291,7 @@ public class DynamicObjectMover : MonoBehaviour {
 		_wasDown = false;
 		_hadObject = true;
 		
-		Physics.IgnoreCollision(_collider, GetComponent<Collider>(), true);
+		//Physics.IgnoreCollision(_collider, GetComponent<Collider>(), true);
 
 	}
 
@@ -350,7 +357,7 @@ public class DynamicObjectMover : MonoBehaviour {
 		} else {
 			_grabbedRigidbody.velocity *= 0.45f;
 		}
-		Physics.IgnoreCollision(_collider, GetComponent<Collider>(), false);
+		//Physics.IgnoreCollision(_collider, GetComponent<Collider>(), false);
 
 		_grabbedRigidbody = null;
 		_grabbedTransform = null;
