@@ -1,6 +1,7 @@
 #region
 
 using UnityEngine;
+using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
 
 #endregion
@@ -40,7 +41,6 @@ public class DynamicObjectMover : MonoBehaviour {
 	public float MaximumGrabDistance = 50f;
 
 	bool _distanceChanged;
-	float _actualMinDistance;
 
 	#endregion
 
@@ -104,7 +104,6 @@ public class DynamicObjectMover : MonoBehaviour {
 			Debug.LogError($"{nameof(DynamicObjectMover)} missing Camera", this);
 			return;
 		}
-		_actualMinDistance = MinimumObjectDistance;
 	}
 	void FixedUpdate () {
 		if (_grabbedRigidbody) {
@@ -275,7 +274,7 @@ public class DynamicObjectMover : MonoBehaviour {
 		_grabbedRigidbody.freezeRotation = true;
 
 		_initialInterpolationSetting = _grabbedRigidbody.interpolation;
-		_currentGrabDistance = _actualMinDistance; // Vector3.Distance(ray.origin, hit.point);
+		_currentGrabDistance = MinimumObjectDistance; // Vector3.Distance(ray.origin, hit.point);
 
 		_grabbedTransform = _grabbedRigidbody.transform;
 		_grabbedRigidbody.interpolation = RigidbodyInterpolation.Interpolate;
@@ -284,6 +283,8 @@ public class DynamicObjectMover : MonoBehaviour {
 		OnObjectGrabbed?.Invoke(_grabbedRigidbody.gameObject);
 		_wasDown = false;
 		_hadObject = true;
+		
+		Physics.IgnoreCollision(_collider, GetComponent<Collider>(), true);
 
 	}
 
@@ -349,6 +350,7 @@ public class DynamicObjectMover : MonoBehaviour {
 		} else {
 			_grabbedRigidbody.velocity *= 0.45f;
 		}
+		Physics.IgnoreCollision(_collider, GetComponent<Collider>(), false);
 
 		_grabbedRigidbody = null;
 		_grabbedTransform = null;
