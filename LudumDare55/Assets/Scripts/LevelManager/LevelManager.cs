@@ -35,6 +35,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private SceneAsset mainMenuLevel;
     [SerializeField] private SceneAsset gameOverLevel;
     [SerializeField] private List<SceneAsset> playableLevels = new();
+    
+    [Header("Debug")]
     [SerializeField] private int currentPlayableLevel = -1;
 
     private void Awake()

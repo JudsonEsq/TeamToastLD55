@@ -8,10 +8,12 @@ public class TimeManager : MonoBehaviour
     // but for now, it's setup to be placed on all playable scenes/level and you can have different settings for the different levels
 
 
-    [Tooltip("This is the maximun amount of time allowed on this level before the player fails the level")]
+    [Tooltip("This is the maximun amount of time allowed on this level before the player fails the level in minutes")]
     [SerializeField] private float levelAllotedTime = 10f;
     [Tooltip("This adds a delay to the gameover transition, (OPTIONAL)")]
     [SerializeField] private float gameOverTransitionDelay = 0f;
+    
+    [Header("Debug")]
     [SerializeField] private float currentTime = 0f;
     private bool disableTimer = false;
 
