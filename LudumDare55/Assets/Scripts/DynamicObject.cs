@@ -11,8 +11,7 @@ public class DynamicObject : MonoBehaviour {
 	}
 
 	public OnCollision OnCollisionHit;
-
-
+	
 	[Tooltip("The Rigidbody component attached to this object")]
 	public Rigidbody RigidBody;
 
@@ -28,34 +27,27 @@ public class DynamicObject : MonoBehaviour {
 	public bool Launched;
 
 	public bool IsGrabbed { get; private set; }
-	public bool CanBeGrabbed => !IsGrabbed && !Controlled;
-	public bool Controlled { get; private set; }
+	public bool CanBeGrabbed => !IsGrabbed;
 	public bool IsGrounded { get; private set; }
-	public bool DestroyOnHit;
 
 	
-	[SerializeField]
 	float _lastSpeed;
-
-	[SerializeField]
 	Vector3 _lastVelocity;
-	[SerializeField]
 	bool _touching;
-
-	readonly Collider[] _colliders = new Collider[16];
-
+	
 	GameObject _grabber;
 
 
 	#region Grabbing
 
-	public void StartGrab (GameObject grabber) {
+	// these are virtual methods so that we can override them in a child class
+	public virtual void StartGrab (GameObject grabber) {
 		_grabber = grabber;
 		
 		Launched = false;
 		IsGrabbed = true;
 	}
-	public void StopGrab () {
+	public virtual void StopGrab () {
 		_grabber = null;
 		IsGrabbed = false;
 	}
@@ -74,14 +66,8 @@ public class DynamicObject : MonoBehaviour {
 			_lastSpeed = 0;
 			_lastVelocity = Vector3.zero;
 			IsGrounded = true;
-
-			//Ricochet = false;
-			//_ricochetCount = 0;
 		} else {
 			IsGrounded = false;
-			if (DestroyOnHit) {
-				Destroy(gameObject);
-			}
 		}
 	}
 	public void OnCollisionEnter (Collision other) {
