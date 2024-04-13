@@ -1587,12 +1587,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MoveSpeed: 3.42
-  JumpForce: 25
-  JumpCooldown: 0.25
+  MaxSpeed: 3.42
+  Acceleration: 50
+  Deceleration: 25
   AirMultiplier: 0.4
   Gravity: 0
-  JumpKey: 32
-  Orientation: {fileID: 8986419024992940233}
   HorizontalInput: 0
   VerticalInput: 0
   CameraController: {fileID: 7576226574603107483}
