@@ -1,17 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MenuHandler : MonoBehaviour
 {
 
     [SerializeField] private Canvas mainCanvas;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Canvas mainMenuSet;
+    [SerializeField] private Canvas optionsMenuSet;
 
     // Triggers all animations for starting the game, then
     // loads main play scene
@@ -26,9 +23,17 @@ public class MenuHandler : MonoBehaviour
         // Load main play scene.
     }
 
-    // Update is called once per frame
-    void Update()
+
+    public void OpenOptions()
     {
-        
+        optionsMenuSet.enabled = true;
+        mainMenuSet.enabled = false;
     }
+
+    public void CloseOptions()
+    {
+        mainMenuSet.enabled = true;
+        optionsMenuSet.enabled = false;
+    }
+
 }
