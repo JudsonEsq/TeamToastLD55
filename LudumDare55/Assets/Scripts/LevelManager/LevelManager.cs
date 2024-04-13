@@ -137,6 +137,9 @@ public class LevelManager : MonoBehaviour
 
         if (string.IsNullOrEmpty(sceneName)) return;
 
+        // This is triggered when a new scene is expected to be loaded
+        OnLevelTransitioned?.Invoke(transitionType);
+
         StartCoroutine(LoadLevel(delay, sceneName));
 
         transitioning = true;
