@@ -6,6 +6,8 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class BreakableObject : MonoBehaviour
 {
+    private Rigidbody rb;
+
     [Tooltip("The speed at which a collision will break this object.")]
     [SerializeField] private float breakThreshold = 2f;
     [Tooltip("If you want the broken object to leave scraps, put them in this array")]
@@ -13,24 +15,34 @@ public class BreakableObject : MonoBehaviour
     [Tooltip("Distance between debris elements if/when they spawn")]
     [SerializeField] private float debrisSpacing = 0.1f;
 
+    [SerializeField] private bool isObjectiveItem = false;
+
     private BreakTargets parentObj;
 
     void Start()
     {
-        // Since completing this objective destroys this item, we need to contact the objective before we destroy it
-        parentObj = FindObjectOfType<BreakTargets>();
+        rb = GetComponent<Rigidbody>();
+        
+        if (isObjectiveItem)
+        {
+            parentObj = FindObjectOfType<BreakTargets>();
+        }
 
-        if(parentObj == null)
+        /*if(parentObj == null)
         {
             Debug.LogWarning("WARNING: Breakable Object found no Break Targets Objective in scene");
             Destroy(gameObject);
-        }    
+        }*/
 
     }
 
     private void breakSelf()
     {
-        parentObj.TargetBroken();
+        if (parentObj != null)
+        {
+            parentObj.TargetBroken();
+        }
+        
         Vector3 finalPos = transform.position;
         Vector3 finalRot = transform.eulerAngles;
         // From the last position and rotation of the parent object, find the direction to stack the debris.
@@ -48,13 +60,13 @@ public class BreakableObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(this.GetComponentInParent<Rigidbody>().velocity.magnitude >= breakThreshold)
+        if (rb != null && rb.velocity.magnitude >= breakThreshold)
         {
             breakSelf();
             return;
         }
 
-        if(!collision.rigidbody.Equals(null) && collision.rigidbody.velocity.magnitude >= breakThreshold)
+        if (collision.rigidbody != null && collision.rigidbody.velocity.magnitude >= breakThreshold)
         {
             breakSelf();
             return;
