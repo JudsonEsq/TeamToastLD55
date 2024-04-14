@@ -24,10 +24,11 @@ public class Tutorialize : MonoBehaviour
     private void IncrementText()
     {
         messageIndex++;
-        if(messageIndex >= tutorialMessages.Length)
+        if(messageIndex >= tutorialMessages.Length - 1)
         {
             Destroy(tutorialText);
             Destroy(gameObject);
+            return;
         }
         tutorialText.text = tutorialMessages[messageIndex];
     }

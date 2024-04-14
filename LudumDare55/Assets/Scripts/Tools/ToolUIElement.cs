@@ -17,45 +17,52 @@ public class ToolUIElement : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public Action<GameObject> OnHover;
 
 
-    private void OnDisable() {
+    private void OnDisable()
+    {
         Highlight(false);
     }
 
     public void Highlight(bool toggle)
-    {   
+    {
         if (toggle)
         {
-            if (useSprites)
+            if (uiImage != null)
             {
-                uiImage.sprite = onHoverEnterSprite;
-            }
-            else
-            {
-                uiImage.color = Color.red;
+                if (useSprites)
+                {
+                    uiImage.sprite = onHoverEnterSprite;
+                }
+                else
+                {
+                    uiImage.color = Color.red;
+                }
             }
 
             textArea.SetText(toolName);
 
             OnHover?.Invoke(toolPrefab);
-            
+
         }
-        else 
+        else
         {
-            if (useSprites)
+            if (uiImage != null)
             {
-                uiImage.sprite = onHoverExitSprite;
-            }
-            else
-            {
-                uiImage.color = Color.white;
+                if (useSprites)
+                {
+                    uiImage.sprite = onHoverExitSprite;
+                }
+                else
+                {
+                    uiImage.color = Color.white;
+                }
             }
 
             textArea.SetText("");
 
-            OnHover?.Invoke(null); 
+            OnHover?.Invoke(null);
         }
     }
-    
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {

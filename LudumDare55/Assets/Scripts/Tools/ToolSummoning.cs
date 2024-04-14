@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class ToolSummoning : MonoBehaviour
 {
-    public GameObject toolWheelUI;
+    [SerializeField] private GameObject toolWheelUI;
     public List<ToolUIElement> toolUIElements;
-    [SerializeField] private float zOffsetToSpawnTool = 5f;
-    [SerializeField] private float yOffsetToSpawnTool = 5f;
+
+    [SerializeField] private Transform cameraTransform;
+    [SerializeField] private float distanceToSpawnTool = 1f;
 
     [Header("Debug")]
     [SerializeField] private GameObject currentToolToSummon;
@@ -52,7 +53,15 @@ public class ToolSummoning : MonoBehaviour
     private void OpenToolWheel(bool toggle)
     {
         toolWheelUI.SetActive(toggle);
-        Cursor.visible = toggle;
+        //Cursor.visible = toggle;
+        if (toggle)
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+        }
     }
 
     private void SetToolToSummon(GameObject toolPrefab)
@@ -64,8 +73,7 @@ public class ToolSummoning : MonoBehaviour
     {
         if (currentToolToSummon == null) return;
 
-        var offset = new Vector3(0, yOffsetToSpawnTool, zOffsetToSpawnTool);
-        var summonPos = transform.position + offset;
+        var summonPos = cameraTransform == null ? transform.position : cameraTransform.position + cameraTransform.forward * distanceToSpawnTool;
         Instantiate(currentToolToSummon, summonPos, Quaternion.identity);
     }
 }
