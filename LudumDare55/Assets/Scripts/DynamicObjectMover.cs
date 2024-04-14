@@ -20,6 +20,8 @@ public class DynamicObjectMover : MonoBehaviour {
 	[FormerlySerializedAs("cameraController")]
 	public CameraController CameraController;
 
+	public Handimator Handimator;
+	
 	#endregion
 
 	#region Distance
@@ -58,7 +60,6 @@ public class DynamicObjectMover : MonoBehaviour {
 
 	#region ObjectInfo
 
-	[SerializeField]
 	Rigidbody _grabbedRigidbody;
 	Transform _grabbedTransform;
 	Vector3 _hitOffsetLocal;
@@ -75,13 +76,10 @@ public class DynamicObjectMover : MonoBehaviour {
 	bool _justReleased;
 	bool _wasKinematic;
 	Collider _collider;
-	readonly Collider[] _colliders = new Collider[16];
 	float _drainTimer;
 	public Collider[] Colliders = new Collider[16];
 
 	DynamicObject _teleObject;
-
-	bool _wasDown;
 	bool _hadObject;
 	int _frames;
 	public ObjectGrabbed OnObjectGrabbed;
@@ -288,9 +286,10 @@ public class DynamicObjectMover : MonoBehaviour {
 
 		//  HasObject = true;
 		OnObjectGrabbed?.Invoke(_grabbedRigidbody.gameObject);
-		_wasDown = false;
 		_hadObject = true;
 		
+		Handimator.PlayHoldAnimation();
+	
 		//Physics.IgnoreCollision(_collider, GetComponent<Collider>(), true);
 
 	}
@@ -353,8 +352,10 @@ public class DynamicObjectMover : MonoBehaviour {
 //					Debug.Log(direction);
 			Vector3 velocity = direction*(ThrowForce) + additionalForce;
 			_grabbedRigidbody.AddForce(velocity, ForceMode.VelocityChange);
+			Handimator.PlayThrowAnimation();
 
 		} else {
+			Handimator.PlayDropAnimation();
 			_grabbedRigidbody.velocity *= 0.45f;
 		}
 		//Physics.IgnoreCollision(_collider, GetComponent<Collider>(), false);

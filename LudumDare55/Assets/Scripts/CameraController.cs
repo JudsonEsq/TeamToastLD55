@@ -132,6 +132,10 @@ using Random = UnityEngine.Random;
 
 		#region Raycasts
 
+		public bool DynamicObjectRaycast (out RaycastHit hit, float distance) {
+			return Physics.Raycast(Position, Forward, out hit, distance, LayerMask.GetMask("DynamicObjects"));
+		}
+		
 		public bool EnvironmentRaycast (out RaycastHit hit, float distance) {
 			return Physics.Raycast(Position, Forward, out hit, distance, LayerMask.GetMask("Environment"));
 		}
