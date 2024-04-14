@@ -9,14 +9,15 @@ public class PlayerMovement : MonoBehaviour
 	public float Gravity;
 	public float HorizontalInput;
 	public float VerticalInput;
-	public float LerpSpeed = 5f; // Speed of interpolation
+	public float LerpSpeed = 5f;
+
 	Vector2 _currentRawMove;   
 	Vector2 _targetRawMove;
 	float _currentMoveSpeed; 
 	float _targetMoveSpeed;
 	
 	Vector3 _moveDirection;
-	Vector3 _velocity; // New velocity variable
+	Vector3 _velocity; 
 	CharacterController _controller;
 	public CameraController CameraController;
 
