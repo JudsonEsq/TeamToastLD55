@@ -12,4 +12,14 @@ public class Handimator : MonoBehaviour{
 	public void PlayThrowAnimation(){
 		Animator.Play("Armature_Throw");
 	}
+
+	public void PlayIdleAnimation()
+	{
+		Animator.Play("Armature_Idle");
+	}
+
+	public void PlayPickupAnimation()
+	{
+		Animator.Play("Armature_PickUp");
+	}
 }

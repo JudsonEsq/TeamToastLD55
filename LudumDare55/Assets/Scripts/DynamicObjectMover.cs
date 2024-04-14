@@ -102,6 +102,13 @@ public class DynamicObjectMover : MonoBehaviour {
 			Debug.LogError($"{nameof(DynamicObjectMover)} missing Camera", this);
 			return;
 		}
+
+		// PLay idle animation when game starts, this might need to be changed based on the scene, 
+		// since there are different animations for the menu scene
+		if (Handimator!= null)
+		{
+			Handimator.PlayIdleAnimation();
+		}
 	}
 	void FixedUpdate () {
 		if (_grabbedRigidbody) {
@@ -269,6 +276,9 @@ public class DynamicObjectMover : MonoBehaviour {
 			return;
 		}
 
+		// Play pickup animation
+		Handimator.PlayPickupAnimation();
+
 		_collider = objCollider;
 
 		// Track rigidbody's initial information
@@ -288,7 +298,8 @@ public class DynamicObjectMover : MonoBehaviour {
 		OnObjectGrabbed?.Invoke(_grabbedRigidbody.gameObject);
 		_hadObject = true;
 		
-		Handimator.PlayHoldAnimation();
+		// pickup should transition to hold on the animator graph
+		//Handimator.PlayHoldAnimation();
 	
 		//Physics.IgnoreCollision(_collider, GetComponent<Collider>(), true);
 
