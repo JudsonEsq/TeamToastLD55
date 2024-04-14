@@ -30,7 +30,7 @@ public class BreakableObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(this.GetComponentInParent<Rigidbody>().velocity.magnitude >= breakThreshold)
+        if(this.GetComponentInParent<Rigidbody>().velocity.magnitude >= breakThreshold || collision.rigidbody.velocity.magnitude >= breakThreshold)
         {
             parentObj.TargetBroken();
             Vector3 finalPos = transform.position;

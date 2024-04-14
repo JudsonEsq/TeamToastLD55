@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2841661718100802578
+--- !u!1001 &7992375138543698757
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -63,16 +63,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDarePickle
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: fa97596150ad8b54aa850a0e479c9d95,
-        type: 3}
-      propertyPath: m_Layer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: fa97596150ad8b54aa850a0e479c9d95,
-        type: 3}
-      propertyPath: m_TagString
-      value: Interactable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -80,29 +70,29 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa97596150ad8b54aa850a0e479c9d95,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2101562564348066972}
+      addedObject: {fileID: 1956128699535179292}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa97596150ad8b54aa850a0e479c9d95,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7623023854306050659}
+      addedObject: {fileID: 6325640409291153168}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: fa97596150ad8b54aa850a0e479c9d95,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 6474094614260289595}
+      addedObject: {fileID: 3688570299264956928}
   m_SourcePrefab: {fileID: 100100000, guid: fa97596150ad8b54aa850a0e479c9d95, type: 3}
---- !u!1 &3147723219460702531 stripped
+--- !u!1 &7074019245671235092 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: fa97596150ad8b54aa850a0e479c9d95,
     type: 3}
-  m_PrefabInstance: {fileID: 2841661718100802578}
+  m_PrefabInstance: {fileID: 7992375138543698757}
   m_PrefabAsset: {fileID: 0}
---- !u!136 &2101562564348066972
+--- !u!136 &1956128699535179292
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147723219460702531}
+  m_GameObject: {fileID: 7074019245671235092}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -119,13 +109,13 @@ CapsuleCollider:
   m_Height: 0.0015
   m_Direction: 2
   m_Center: {x: -0.000020271124, y: -0.00000029943476, z: -0.000010961376}
---- !u!114 &7623023854306050659
+--- !u!114 &6325640409291153168
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147723219460702531}
+  m_GameObject: {fileID: 7074019245671235092}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 302642cd940b4d2e8ddd4fe35f5c2a6f, type: 3}
@@ -134,18 +124,18 @@ MonoBehaviour:
   OnCollisionHit:
     m_PersistentCalls:
       m_Calls: []
-  RigidBody: {fileID: 6474094614260289595}
+  RigidBody: {fileID: 3688570299264956928}
   OptimalHoldRotation: {x: 0, y: 0, z: 0, w: 0}
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0
   Launched: 0
---- !u!54 &6474094614260289595
+--- !u!54 &3688570299264956928
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3147723219460702531}
+  m_GameObject: {fileID: 7074019245671235092}
   serializedVersion: 4
   m_Mass: 1
   m_Drag: 0
