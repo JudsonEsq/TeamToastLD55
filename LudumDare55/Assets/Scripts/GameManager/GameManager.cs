@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
+#if UNITY_EDITOR
+
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -77,3 +76,4 @@ public class GameManager : MonoBehaviour
         }
     }
 }
+  #endif

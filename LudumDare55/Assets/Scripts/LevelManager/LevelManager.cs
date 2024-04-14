@@ -1,5 +1,5 @@
+#if UNITY_EDITOR
 using System;
-using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -174,3 +174,4 @@ public class LevelManager : MonoBehaviour
         transitioning = false;
     }
 }
+#endif  
