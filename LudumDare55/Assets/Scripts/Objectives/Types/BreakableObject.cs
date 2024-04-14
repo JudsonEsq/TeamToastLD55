@@ -11,7 +11,7 @@ public class BreakableObject : MonoBehaviour
     [Tooltip("If you want the broken object to leave scraps, put them in this array")]
     [SerializeField] private GameObject[] debrisPrefabs;
     [Tooltip("Distance between debris elements if/when they spawn")]
-    [SerializeField] private float debrisSpacing = 0.1;
+    [SerializeField] private float debrisSpacing = 0.1f;
 
     private BreakTargets parentObj;
 
