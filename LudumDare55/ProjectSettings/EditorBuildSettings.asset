@@ -8,8 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jude/MainMenu.unity
     guid: ad9f3574f9a2ae245b65fce5587849e9
-  - enabled: 1
-    path: Assets/Scenes/Jude/Lvl1_Pickles.unity
+  - enabled: 0
+    path: Assets/Scenes/Jude/Test_Gameplay.unity
     guid: 2b68dc74ed2e34449a7c10b9ab2c9d92
   - enabled: 1
     path: Assets/Scenes/Jude/Lvl2_Cookies.unity

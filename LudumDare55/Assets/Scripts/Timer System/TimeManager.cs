@@ -1,5 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+#if UNITY_EDITOR
+
+
 using UnityEngine;
 
 public class TimeManager : MonoBehaviour
@@ -62,3 +63,4 @@ public class TimeManager : MonoBehaviour
         // You can also do a bunch of other stuffs based on the type of level transition that was triggered here
     }
 }
+  #endif
