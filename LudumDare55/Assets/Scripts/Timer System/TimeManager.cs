@@ -12,7 +12,7 @@ public class TimeManager : MonoBehaviour
     [SerializeField] private float levelAllotedTime = 10f;
     [Tooltip("This adds a delay to the gameover transition, (OPTIONAL)")]
     [SerializeField] private float gameOverTransitionDelay = 0f;
-    
+
     [Header("Debug")]
     [SerializeField] private float currentTime = 0f;
     private bool disableTimer = false;
@@ -25,12 +25,18 @@ public class TimeManager : MonoBehaviour
         currentTime = levelAllotedTime * 60f;
         disableTimer = false;
 
-        LevelManager.Instance.OnLevelTransitioned += HandleLevelTransition;
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.OnLevelTransitioned += HandleLevelTransition;
+        }
     }
 
     private void OnDisable()
     {
-        LevelManager.Instance.OnLevelTransitioned -= HandleLevelTransition;
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.OnLevelTransitioned -= HandleLevelTransition;
+        }
     }
 
     private void Update()
@@ -40,7 +46,10 @@ public class TimeManager : MonoBehaviour
         // if the timer is done without the player completing the level, then trigger the gameover transition
         if (currentTime <= 0f)
         {
-            LevelManager.Instance.GameOver(gameOverTransitionDelay);
+            if (LevelManager.Instance != null)
+            {
+                LevelManager.Instance.GameOver(gameOverTransitionDelay);
+            }
         }
 
         currentTime -= Time.deltaTime;

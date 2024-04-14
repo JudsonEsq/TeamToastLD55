@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 1183204484}
   - component: {fileID: 1183204483}
   - component: {fileID: 1183204482}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Cube (1)
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -628,10 +628,6 @@ MonoBehaviour:
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0
   Launched: 0
-  DestroyOnHit: 0
-  _lastSpeed: 0
-  _lastVelocity: {x: 0, y: 0, z: 0}
-  _touching: 0
 --- !u!54 &1183204483
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -759,7 +755,7 @@ GameObject:
   - component: {fileID: 1634142016}
   - component: {fileID: 1634142015}
   - component: {fileID: 1634142014}
-  m_Layer: 6
+  m_Layer: 3
   m_Name: Cube
   m_TagString: Interactable
   m_Icon: {fileID: 0}
@@ -786,10 +782,6 @@ MonoBehaviour:
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0
   Launched: 0
-  DestroyOnHit: 0
-  _lastSpeed: 0
-  _lastVelocity: {x: 0, y: 0, z: 0}
-  _touching: 0
 --- !u!54 &1634142015
 Rigidbody:
   m_ObjectHideFlags: 0
