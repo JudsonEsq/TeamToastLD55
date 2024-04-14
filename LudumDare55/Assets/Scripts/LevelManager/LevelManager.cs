@@ -117,7 +117,7 @@ public class LevelManager : MonoBehaviour
     private void Update()
     {
         // Solely for testing purposes
-        if (Input.GetKeyDown(KeyCode.L))
+        /*if (Input.GetKeyDown(KeyCode.L))
         {
             GameOver();
         }
@@ -135,7 +135,7 @@ public class LevelManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.O))
         {
             TransitionLevel(0f, LevelTransition.Passed);
-        }
+        }*/
     }
 
     public void NewGame(float delay = 0f)
