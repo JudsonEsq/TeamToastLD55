@@ -20,7 +20,7 @@ public class BreakableObject : MonoBehaviour
         // Since completing this objective destroys this item, we need to contact the objective before we destroy it
         parentObj = FindObjectOfType<BreakTargets>();
 
-        if(parentObj.Equals(null))
+        if(parentObj == null)
         {
             Debug.LogWarning("WARNING: Breakable Object found no Break Targets Objective in scene");
             Destroy(gameObject);
