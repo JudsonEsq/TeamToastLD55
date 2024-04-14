@@ -31,9 +31,11 @@ public class LevelManager : MonoBehaviour
     public Action OnCompleteAllLevels;
 
     [Header("Level Settings")]
+#if UNITY_EDITOR
     [SerializeField] private SceneAsset mainMenuLevel;
     [SerializeField] private SceneAsset gameOverLevel;
     [SerializeField] private List<SceneAsset> playableLevels = new();
+#endif
 
     [Header("Debug")]
     [SerializeField] private int currentPlayableLevel = -1;
@@ -62,6 +64,7 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR
     // This should only be run while in the editor
     [ContextMenu("Update Scene Names")]
     private void UpdateSceneNames()
@@ -93,6 +96,7 @@ public class LevelManager : MonoBehaviour
 
         //Debug.Log("Update scene names");
     }
+#endif
 
     private void Start()
     {
