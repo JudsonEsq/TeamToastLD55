@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 2441216041517988736}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.40499997, z: 0}
+  m_LocalPosition: {x: 0, y: 0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -239,15 +239,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7513a5764c8abe04598d4e7aae69ea73, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 3.42
-  MaxSpeed: 3.42
+  MaxSpeed: 7
   Acceleration: 50
-  Deceleration: 25
+  Deceleration: 60
   AirMultiplier: 0.4
-  Gravity: 0
+  Gravity: 25
   HorizontalInput: 0
   VerticalInput: 0
-  LerpSpeed: 5
+  LerpSpeed: 7
   CameraController: {fileID: 2112665662181110650}
 --- !u!143 &3751194507186310220
 CharacterController:

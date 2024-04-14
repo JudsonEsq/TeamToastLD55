@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-	public float MoveSpeed;
 	public float MaxSpeed;
 	public float Acceleration;
 	public float Deceleration;

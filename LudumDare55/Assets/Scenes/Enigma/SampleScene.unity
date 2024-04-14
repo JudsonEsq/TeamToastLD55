@@ -816,6 +816,7 @@ GameObject:
   - component: {fileID: 609280563}
   - component: {fileID: 609280565}
   - component: {fileID: 609280564}
+  - component: {fileID: 609280566}
   m_Layer: 5
   m_Name: Crosshair
   m_TagString: Untagged
@@ -832,7 +833,7 @@ RectTransform:
   m_GameObject: {fileID: 609280562}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 475138889}
@@ -862,7 +863,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 93a1894ae6629b749b800fce4a356bcd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 878638cd48727204986c75ce9421360b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -880,6 +881,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 609280562}
   m_CullTransparentMesh: 1
+--- !u!114 &609280566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609280562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b0af6c336a84c947998f13a2d3bbaba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CrosshairImage: {fileID: 609280564}
+  GrabSprite: {fileID: 21300000, guid: c62b1929322c49945938d7e4c77df4e2, type: 3}
+  DefaultSprite: {fileID: 21300000, guid: 878638cd48727204986c75ce9421360b, type: 3}
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -1433,7 +1449,7 @@ PrefabInstance:
     - target: {fileID: 1841857578844211873, guid: ed349bcbcf182cc4196878335f503cad,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.88
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 1841857578844211873, guid: ed349bcbcf182cc4196878335f503cad,
         type: 3}
