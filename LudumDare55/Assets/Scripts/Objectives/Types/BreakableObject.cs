@@ -46,7 +46,7 @@ public class BreakableObject : MonoBehaviour
         Vector3 finalPos = transform.position;
         Vector3 finalRot = transform.eulerAngles;
         // From the last position and rotation of the parent object, find the direction to stack the debris.
-        Vector3 debrisVector = Vector3.RotateTowards(finalPos, finalRot, 8, debrisSpacing);
+        Vector3 debrisVector = Vector3.RotateTowards(finalPos, finalRot, 8f, debrisSpacing);
 
         foreach (GameObject debris in debrisPrefabs)
         {
