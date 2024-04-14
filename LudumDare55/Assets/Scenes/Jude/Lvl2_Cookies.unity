@@ -6064,6 +6064,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chair (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 5273236757039300313, guid: e90aa06fc26e4024488ed5723fc39ac4,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9002,6 +9007,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273236757039300313, guid: e90aa06fc26e4024488ed5723fc39ac4,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15131,6 +15141,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273236757039300313, guid: e90aa06fc26e4024488ed5723fc39ac4,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24267,6 +24282,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Chair
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273236757039300313, guid: e90aa06fc26e4024488ed5723fc39ac4,
+        type: 3}
+      propertyPath: m_Mass
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
