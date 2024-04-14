@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class Tutorialize : MonoBehaviour
 {
-    [SerializeField] private TextMeshPro tutorialText;
+    [SerializeField] private TextMeshProUGUI tutorialText;
     [Tooltip("A list of keys to be tutorialized")]
     [SerializeField] private KeyCode[] tutorialKeys;
     [Tooltip("The messages to be displayed with each tutorialized key")]
     [SerializeField] private string[] tutorialMessages;
+
+    private int messageIndex = 0;
 
     private void Awake()
     {
@@ -19,11 +21,24 @@ public class Tutorialize : MonoBehaviour
         }
     }
 
-    
+    private void IncrementText()
+    {
+        messageIndex++;
+        if(messageIndex >= tutorialMessages.Length)
+        {
+            Destroy(tutorialText);
+            Destroy(gameObject);
+        }
+        tutorialText.text = tutorialMessages[messageIndex];
+    }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(tutorialKeys[messageIndex]))
+        {
+            IncrementText();
+
+        }
     }
 }
