@@ -51,3 +51,9 @@ MonoBehaviour:
   - {fileID: 102900000, guid: 3821e8e2b324c0b4c9f92744e8289d8c, type: 3}
   - {fileID: 102900000, guid: 269cc86d22f5501439003bd54d3ca051, type: 3}
   currentPlayableLevel: -1
+  mainMenuLevelName: Test_MainMenu
+  gameOverLevelName: Test_GameOver
+  playableLevelNames:
+  - Test_Area_1
+  - Test_Area_2
+  - Test_Area_3

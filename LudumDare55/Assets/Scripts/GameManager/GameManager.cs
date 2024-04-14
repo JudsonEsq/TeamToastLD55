@@ -1,5 +1,5 @@
-#if UNITY_EDITOR
-
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -28,14 +28,21 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         // Subcribe to the leveltransition event
-        LevelManager.Instance.OnLevelTransitioned += HandleLevelTransition;
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.OnLevelTransitioned += HandleLevelTransition;
+        }
+        
     }
 
     private void OnDisable()
     {
         // unsubscribe from all events
-        LevelManager.Instance.OnLevelTransitioned -= HandleLevelTransition;
-
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.OnLevelTransitioned -= HandleLevelTransition;
+        }
+        
         if (currentObjectiveManager != null)
         {
             currentObjectiveManager.OnAllObjectivesCompleted -= UpdateOnCompleteAllObjectives;
@@ -64,7 +71,10 @@ public class GameManager : MonoBehaviour
     private void UpdateOnCompleteAllObjectives()
     {
         // Transition to next playable level
-        LevelManager.Instance.TransitionLevel(playableLevelTransitionDelay, LevelManager.LevelTransition.Passed);
+        if (LevelManager.Instance != null)
+        {
+            LevelManager.Instance.TransitionLevel(playableLevelTransitionDelay, LevelManager.LevelTransition.Passed);
+        }
     }
 
     // This is called when the Level transition event is triggered
@@ -76,4 +86,3 @@ public class GameManager : MonoBehaviour
         }
     }
 }
-  #endif
