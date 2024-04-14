@@ -116,7 +116,7 @@ MonoBehaviour:
   OnCollisionHit:
     m_PersistentCalls:
       m_Calls: []
-  RigidBody: {fileID: 0}
+  RigidBody: {fileID: 117196242829844463}
   OptimalHoldRotation: {x: 0, y: 0, z: 0, w: 0}
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0

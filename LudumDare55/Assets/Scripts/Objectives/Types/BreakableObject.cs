@@ -28,24 +28,36 @@ public class BreakableObject : MonoBehaviour
 
     }
 
+    private void breakSelf()
+    {
+        parentObj.TargetBroken();
+        Vector3 finalPos = transform.position;
+        Vector3 finalRot = transform.eulerAngles;
+        // From the last position and rotation of the parent object, find the direction to stack the debris.
+        Vector3 debrisVector = Vector3.RotateTowards(finalPos, finalRot, 8, debrisSpacing);
+
+        foreach (GameObject debris in debrisPrefabs)
+        {
+            // Spawn each element of the Debris array, in order.
+            Instantiate(debris, finalPos, Quaternion.Euler(finalRot));
+            finalPos += debrisVector * debrisSpacing;
+        }
+
+        Destroy(gameObject);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
-        if(this.GetComponentInParent<Rigidbody>().velocity.magnitude >= breakThreshold || collision.rigidbody.velocity.magnitude >= breakThreshold)
+        if(this.GetComponentInParent<Rigidbody>().velocity.magnitude >= breakThreshold)
         {
-            parentObj.TargetBroken();
-            Vector3 finalPos = transform.position;
-            Vector3 finalRot = transform.eulerAngles;
-            // From the last position and rotation of the parent object, find the direction to stack the debris.
-            Vector3 debrisVector = Vector3.RotateTowards(finalPos, finalRot, 8, debrisSpacing);
+            breakSelf();
+            return;
+        }
 
-            foreach (GameObject debris in debrisPrefabs)
-            {
-                // Spawn each element of the Debris array, in order.
-                Instantiate(debris, finalPos, Quaternion.Euler(finalRot));
-                finalPos += debrisVector * debrisSpacing;
-            }
-
-            Destroy(gameObject);
+        if(!collision.rigidbody.Equals(null) && collision.rigidbody.velocity.magnitude >= breakThreshold)
+        {
+            breakSelf();
+            return;
         }
 
     }
