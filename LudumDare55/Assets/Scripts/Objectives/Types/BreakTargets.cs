@@ -7,6 +7,8 @@ public class BreakTargets : Objective
     [Tooltip("How many targets the player must break to succeed this objective")]
     [SerializeField] private int totalTargets = 1;
 
+    [Tooltip("Action text, tells what action to perform")]
+    [SerializeField] private string performActionText = "";
     [Tooltip("Target's name to be broken")]
     [SerializeField] private string targetName = "";
 
@@ -16,16 +18,17 @@ public class BreakTargets : Objective
     {
         base.Start();
 
-        var text = $"Break {targetName} : {targetsBroken} / {totalTargets}";
+        // Update the objective text
+        var text = $"{performActionText} {targetName} : {targetsBroken} / {totalTargets}";
         SetObjectiveText(text);
     }
 
     public void TargetBroken()
     {
         targetsBroken++;
-        
+
         // Update the objective text
-        var text = $"Break {targetName} : {targetsBroken} / {totalTargets}";
+        var text = $"{performActionText} {targetName} : {targetsBroken} / {totalTargets}";
         SetObjectiveText(text);
     }
 
