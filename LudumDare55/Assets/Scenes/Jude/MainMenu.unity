@@ -291,6 +291,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14ebf7477048874e9e8c456ec51ce56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalWobble: 1
   WobbleSpeed: 0.05
   startValue: 210
   rotateWobble: 1
@@ -482,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 331407510}
   - component: {fileID: 331407509}
+  - component: {fileID: 331407511}
   m_Layer: 0
   m_Name: AudioController
   m_TagString: Untagged
@@ -499,11 +501,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5f0377252816f05488ed86552f320c0b, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.403
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -600,6 +602,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &331407511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 331407508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33d819e9d6279d9448bd75fbe8bbba09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &376183295
 GameObject:
   m_ObjectHideFlags: 0
@@ -1246,6 +1260,7 @@ GameObject:
   - component: {fileID: 883905612}
   - component: {fileID: 883905611}
   - component: {fileID: 883905615}
+  - component: {fileID: 883905616}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1357,6 +1372,25 @@ MonoBehaviour:
   background: {fileID: 0}
   mainMenuSet: {fileID: 1153148193}
   optionsMenuSet: {fileID: 1859245836}
+--- !u!114 &883905616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883905610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5864ce7ac21b348b93371599169833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenuLevel: {fileID: 102900000, guid: ad9f3574f9a2ae245b65fce5587849e9, type: 3}
+  gameOverLevel: {fileID: 0}
+  playableLevels: []
+  currentPlayableLevel: -1
+  mainMenuLevelName: MainMenu
+  gameOverLevelName: 
+  playableLevelNames: []
 --- !u!1 &894998659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,6 +1883,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14ebf7477048874e9e8c456ec51ce56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalWobble: 1
   WobbleSpeed: 0.07
   startValue: 290
   rotateWobble: 1
@@ -1945,6 +1980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14ebf7477048874e9e8c456ec51ce56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalWobble: 1
   WobbleSpeed: 0.1
   startValue: 140
   rotateWobble: 0
@@ -2500,6 +2536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14ebf7477048874e9e8c456ec51ce56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalWobble: 1
   WobbleSpeed: 0
   startValue: 0
   rotateWobble: 1
@@ -2883,6 +2920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d14ebf7477048874e9e8c456ec51ce56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  verticalWobble: 1
   WobbleSpeed: 0.15
   startValue: 0
   rotateWobble: 1
