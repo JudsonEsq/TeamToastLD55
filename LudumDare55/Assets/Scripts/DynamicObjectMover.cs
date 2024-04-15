@@ -1,8 +1,6 @@
 #region
 
-using System.Linq;
 using UnityEngine;
-using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
 
 #endregion
@@ -177,7 +175,7 @@ public class DynamicObjectMover : MonoBehaviour {
 		}
 
 		if (Input.GetKey(KeyCode.Mouse0) && !_grabbedRigidbody && !_justReleased) {
-			Debug.Log("GrabObject");
+			//Debug.Log("GrabObject");
 			GrabObject();
 		} else if (_grabbedRigidbody) {
 			if (Input.GetKeyDown(KeyCode.Mouse1) || !IsObjectInRange()) {
@@ -272,24 +270,35 @@ public class DynamicObjectMover : MonoBehaviour {
 	}
 
 	void SetObject (Collider objCollider) {
-		Debug.Log("SetObject: " + objCollider.name);
+		//Debug.Log("SetObject Collider : " + objCollider.name);
 
 		// check for a telekinesis object
 		_teleObject = objCollider.GetComponent<DynamicObject>();
+		if (_teleObject == null)
+		{
+			_teleObject = objCollider.GetComponentInParent<DynamicObject>();
+		}
 		if (_teleObject && _teleObject.CanBeGrabbed) {
+			//Debug.Log("Holding : " + _teleObject.name);
 			_teleObject.StartGrab(gameObject);
 		} else if (_teleObject && !_teleObject.CanBeGrabbed) {
 			return;
 		}
 
-		// Play pickup animation
-		Handimator.PlayPickupAnimation();
-
 		_collider = objCollider;
 
 		// Track rigidbody's initial information
 		_grabbedRigidbody = objCollider.GetComponent<Rigidbody>();
+		if (_grabbedRigidbody == null)
+		{
+			_grabbedRigidbody = objCollider.GetComponentInParent<Rigidbody>();
+		}
 		if (!_grabbedRigidbody) return;
+
+		// Play pickup animation
+		Handimator.PlayPickupAnimation();
+
+
 		_wasKinematic = _grabbedRigidbody.isKinematic;
 		_grabbedRigidbody.isKinematic = false;
 		_grabbedRigidbody.freezeRotation = true;
