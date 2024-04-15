@@ -44,16 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c5864ce7ac21b348b93371599169833, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainMenuLevel: {fileID: 102900000, guid: da304fc95a4b27845ac7e071df6877d8, type: 3}
-  gameOverLevel: {fileID: 102900000, guid: aa19ef41f74619143bdf9e4f40466f2c, type: 3}
-  playableLevels:
-  - {fileID: 102900000, guid: 8e874c6c9d7e83e4097e284a1c710b3e, type: 3}
-  - {fileID: 102900000, guid: 3821e8e2b324c0b4c9f92744e8289d8c, type: 3}
-  - {fileID: 102900000, guid: 269cc86d22f5501439003bd54d3ca051, type: 3}
-  currentPlayableLevel: -1
-  mainMenuLevelName: Test_MainMenu
-  gameOverLevelName: Test_GameOver
-  playableLevelNames:
-  - Test_Area_1
-  - Test_Area_2
-  - Test_Area_3
+  mainMenuLevel: {fileID: 102900000, guid: ad9f3574f9a2ae245b65fce5587849e9, type: 3}
+  playableLevel: {fileID: 102900000, guid: 1cb7a986ed4d5484bac028d691a80ba0, type: 3}
+  endLevel: {fileID: 102900000, guid: ad9f3574f9a2ae245b65fce5587849e9, type: 3}
+  mainMenuLevelName: MainMenu
+  playableLevelName: Lvl1_Pickles
+  endLevelName: MainMenu
