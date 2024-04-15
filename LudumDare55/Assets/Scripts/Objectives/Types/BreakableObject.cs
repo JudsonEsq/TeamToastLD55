@@ -17,7 +17,9 @@ public class BreakableObject : MonoBehaviour
 
     [SerializeField] private bool isObjectiveItem = false;
 
-    private BreakTargets parentObj;
+    private bool breaking = false;
+
+    private BreakTargets objectiveHandler;
 
     void Start()
     {
@@ -25,7 +27,7 @@ public class BreakableObject : MonoBehaviour
         
         if (isObjectiveItem)
         {
-            parentObj = FindObjectOfType<BreakTargets>();
+            objectiveHandler = FindObjectOfType<BreakTargets>();
         }
 
         /*if(parentObj == null)
@@ -36,11 +38,11 @@ public class BreakableObject : MonoBehaviour
 
     }
 
-    private void breakSelf()
+    private void BreakSelf()
     {
-        if (parentObj != null)
+        if (objectiveHandler != null)
         {
-            parentObj.TargetBroken();
+            objectiveHandler.TargetBroken();
         }
         
         Vector3 finalPos = transform.position;
@@ -60,15 +62,17 @@ public class BreakableObject : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (rb != null && rb.velocity.magnitude >= breakThreshold)
+        if (rb != null && rb.velocity.magnitude >= breakThreshold && !breaking)
         {
-            breakSelf();
+            breaking = true;
+            BreakSelf();
             return;
         }
 
-        if (collision.rigidbody != null && collision.rigidbody.velocity.magnitude >= breakThreshold)
+        if (collision.rigidbody != null && collision.rigidbody.velocity.magnitude >= breakThreshold && !breaking)
         {
-            breakSelf();
+            breaking = true;
+            BreakSelf();
             return;
         }
 

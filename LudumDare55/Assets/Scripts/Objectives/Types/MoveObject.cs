@@ -84,7 +84,7 @@ public class MoveObject : Objective
         {
             default:
             case MoveType.Place:
-                text = $"Place {objectName} on {platformName} : {currentNumberOfItems} / {numberOfItems}";
+                text = $"Place {objectName} {platformName} : {currentNumberOfItems} / {numberOfItems}";
                 SetObjectiveText(text);
 
                 break;
