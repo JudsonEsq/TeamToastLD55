@@ -1520,7 +1520,7 @@ PrefabInstance:
     - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.639
+      value: 0.97447497
       objectReference: {fileID: 0}
     - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
@@ -1535,17 +1535,17 @@ PrefabInstance:
     - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -144.4
+      value: -85.5
       objectReference: {fileID: 0}
     - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 69
+      value: 61.3
       objectReference: {fileID: 0}
     - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
       propertyPath: m_ConstrainProportionsScale
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7230642418738028771, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalTargets: 1
-  targetName: 
+  targetName: Pickle Jar
 --- !u!4 &1034671190
 Transform:
   m_ObjectHideFlags: 0
@@ -2573,8 +2573,8 @@ MonoBehaviour:
   numberOfItems: 15
   destroyOnFull: 0
   rewardPrefab: {fileID: 0}
-  objectName: 
-  platformName: 
+  objectName: Cookies
+  platformName: Oven
   currentNumberOfItems: 0
 --- !u!65 &1610903915
 BoxCollider:
