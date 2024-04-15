@@ -773,7 +773,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 883905615}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: OpenOptions
         m_Mode: 1
@@ -906,10 +906,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 883905615}
-        m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
-        m_MethodName: PlayGame
-        m_Mode: 1
+      - m_Target: {fileID: 1822985219}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: NewGame
+        m_Mode: 4
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1260,8 +1260,6 @@ GameObject:
   - component: {fileID: 883905613}
   - component: {fileID: 883905612}
   - component: {fileID: 883905611}
-  - component: {fileID: 883905615}
-  - component: {fileID: 883905616}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1355,42 +1353,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &883905615
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883905610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77acc3a4a4eed8e4bbe4420dc2915f94, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  optionsSpeed: 1
-  mainCanvas: {fileID: 883905613}
-  background: {fileID: 0}
-  mainMenuSet: {fileID: 1153148193}
-  optionsMenuSet: {fileID: 1859245836}
---- !u!114 &883905616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 883905610}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5864ce7ac21b348b93371599169833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mainMenuLevel: {fileID: 102900000, guid: ad9f3574f9a2ae245b65fce5587849e9, type: 3}
-  gameOverLevel: {fileID: 0}
-  playableLevels: []
-  currentPlayableLevel: -1
-  mainMenuLevelName: MainMenu
-  gameOverLevelName: 
-  playableLevelNames: []
 --- !u!1 &894998659
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2201,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 883905615}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuHandler, Assembly-CSharp
         m_MethodName: CloseOptions
         m_Mode: 1
@@ -2831,6 +2793,86 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1001 &1822985218
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848101139597961556, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3584937491894808128, guid: c1f38a8957c07a441af37b76c71c1b5a,
+        type: 3}
+      propertyPath: m_Name
+      value: Level Manager
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c1f38a8957c07a441af37b76c71c1b5a, type: 3}
+--- !u!114 &1822985219 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3882539702511343899, guid: c1f38a8957c07a441af37b76c71c1b5a,
+    type: 3}
+  m_PrefabInstance: {fileID: 1822985218}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c5864ce7ac21b348b93371599169833, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1832829024
 GameObject:
   m_ObjectHideFlags: 0
@@ -3348,3 +3390,4 @@ SceneRoots:
   - {fileID: 2114721237}
   - {fileID: 815775761}
   - {fileID: 331407510}
+  - {fileID: 1822985218}
