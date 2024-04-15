@@ -24,7 +24,7 @@ public class Tutorialize : MonoBehaviour
     private void IncrementText()
     {
         messageIndex++;
-        if(messageIndex >= tutorialMessages.Length - 1)
+        if(messageIndex >= tutorialMessages.Length)
         {
             Destroy(tutorialText);
             Destroy(gameObject);
