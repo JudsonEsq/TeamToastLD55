@@ -1,4 +1,3 @@
-#if UNITY_EDITOR
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +6,7 @@ using UnityEngine;
 public class ObjectiveManager : MonoBehaviour
 {
     [SerializeField] private List<Objective> objectives = new();
+    public List<Objective> GetObjectives() { return objectives; }
 
     public Action OnAllObjectivesCompleted;
     private bool allCompleted = false;
@@ -45,7 +45,7 @@ public class ObjectiveManager : MonoBehaviour
 
         foreach (var objective in objectives)
         {
-            if (objective == null) 
+            if (objective == null)
             {
                 Debug.LogError("There is a null objective, this should not happen", gameObject);
                 return false;
@@ -57,8 +57,7 @@ public class ObjectiveManager : MonoBehaviour
             }
         }
 
-       
+
         return true;
     }
 }
-  #endif

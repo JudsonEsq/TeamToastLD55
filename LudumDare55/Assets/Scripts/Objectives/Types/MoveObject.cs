@@ -19,9 +19,15 @@ public class MoveObject : Objective
     [SerializeField] private bool destroyOnFull = false;
     [Tooltip("The prefab to spawn when this objective is completed, if destroyOnFull is true")]
     [SerializeField] private GameObject rewardPrefab;
-
     private GameObject[] containedObjects;
-    private int currentNumberOfItems;
+
+    [Tooltip("Object's name to be placed or removed")]
+    [SerializeField] private string objectName = "";
+    [Tooltip("Where to place or remove the objects from")]
+    [SerializeField] private string platformName = "";
+
+    [Header("Debug")]
+    [SerializeField] private int currentNumberOfItems;
 
     protected override void Start()
     {
@@ -32,15 +38,19 @@ public class MoveObject : Objective
             default:
             case MoveType.Place:
                 currentNumberOfItems = 0;
-                if(destroyOnFull)
+                if (destroyOnFull)
                 {
                     containedObjects = new GameObject[numberOfItems];
                 }
+
                 break;
             case MoveType.Remove:
                 currentNumberOfItems = numberOfItems;
                 break;
         }
+
+        // update objective text
+        UpdateObjectiveText();
 
     }
 
@@ -50,22 +60,40 @@ public class MoveObject : Objective
         {
             default:
             case MoveType.Place:
-                if(destroyOnFull && currentNumberOfItems >= numberOfItems)
+                if (destroyOnFull && currentNumberOfItems >= numberOfItems)
                 {
-                    foreach(GameObject obj in containedObjects)
+                    foreach (GameObject obj in containedObjects)
                     {
                         Destroy(obj);
                     }
                     destroyOnFull = false;
                     // Just make this true forever once we've destroyed everything inside
-                    currentNumberOfItems = 5 * numberOfItems;
-                }    
+                    // OT : I don't think we need the line below, since once the objective is completed, nothing is meant to run on the class anymore
+                    //currentNumberOfItems = 5 * numberOfItems;
+                }
                 return currentNumberOfItems >= numberOfItems;
             case MoveType.Remove:
                 return currentNumberOfItems <= 0;
         }
     }
 
+    private void UpdateObjectiveText()
+    {
+        var text = "";
+        switch (moveType)
+        {
+            default:
+            case MoveType.Place:
+                text = $"Place {objectName} on {platformName} : {currentNumberOfItems} / {numberOfItems}";
+                SetObjectiveText(text);
+
+                break;
+            case MoveType.Remove:
+                text = $"Remove {objectName} from {platformName} : {currentNumberOfItems}";
+                SetObjectiveText(text);
+                break;
+        }
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -78,10 +106,16 @@ public class MoveObject : Objective
             {
                 if (destroyOnFull)
                 {
-                    containedObjects[currentNumberOfItems] = other.gameObject;
+                    if (containedObjects != null)
+                    {
+                        containedObjects[currentNumberOfItems] = other.gameObject;
+                    }
                 }
                 //Debug.Log($"Added {other.name}");
                 currentNumberOfItems++;
+
+                // update objective text
+                UpdateObjectiveText();
             }
         }
     }
@@ -94,27 +128,31 @@ public class MoveObject : Objective
         if (other.gameObject.CompareTag("Interactable"))
         {
             // Remove that item from the array of contained objects if we're using it.
-            if(destroyOnFull)
+            if (destroyOnFull)
             {
-                for(int i = 0; i < containedObjects.Length; i++)
+                if (containedObjects != null)
                 {
-                    if (containedObjects[i] == null)
+                    for (int i = 0; i < containedObjects.Length; i++)
                     {
-                        break;
-                    }
+                        if (containedObjects[i] == null) continue;
 
-                    if(containedObjects[i].Equals(other.gameObject))
-                    {
-                        containedObjects[i] = null;
-                        break;
+                        if (containedObjects[i].Equals(other.gameObject))
+                        {
+                            containedObjects[i] = null;
+                            break;
+                        }
                     }
                 }
+
             }
             // When the player removes an object
             if (currentNumberOfItems > 0)
             {
                 //Debug.Log($"Removed {other.name}");
                 currentNumberOfItems--;
+
+                // update objective text
+                UpdateObjectiveText();
             }
         }
     }

@@ -97,7 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 9369ae9042e60ab4baacc52d9cc0d390,
+    type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -17650,6 +17651,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveType: 1
   numberOfItems: 15
+  destroyOnFull: 0
+  rewardPrefab: {fileID: 0}
 --- !u!65 &1610903915
 BoxCollider:
   m_ObjectHideFlags: 0
