@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 193654480300531727}
   - component: {fileID: 6970195407758488919}
   - component: {fileID: 1949338712523051066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Bulb
-  m_TagString: Untagged
+  m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -34,24 +34,7 @@ public class MenuHandler : MonoBehaviour
     public void OpenOptions()
     {
         optionsMenuSet.enabled = true;
-
-        StartCoroutine(OptionsArrive());
-
         mainMenuSet.enabled = false;
-    }
-
-    // Coroutine for sliding the options up from the bottom of the screen
-    IEnumerator OptionsArrive()
-    {
-        float progress = 0f;
-
-        while (progress < 1f)
-        {
-            print(progress);
-            progress += 0.01f * optionsSpeed;
-            optionsMenuSet.transform.Translate(Vector3.up * progress);
-            yield return new WaitForSeconds(0.1f);
-        }
     }
 
     public void CloseOptions()
