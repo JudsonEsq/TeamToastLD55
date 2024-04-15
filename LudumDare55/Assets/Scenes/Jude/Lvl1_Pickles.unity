@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1851,7 +1851,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   totalTargets: 1
-  targetName: Pickle Jar
+  targetName: 
 --- !u!4 &1034671190
 Transform:
   m_ObjectHideFlags: 0
@@ -2001,33 +2001,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &1215686111 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1577008768352069018, guid: 61b6c8a37272c9d4ba3644e5d63a2fd4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1945489252}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1215686115
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215686111}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1489973007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2573,8 +2546,8 @@ MonoBehaviour:
   numberOfItems: 15
   destroyOnFull: 0
   rewardPrefab: {fileID: 0}
-  objectName: Cookies
-  platformName: Oven
+  objectName: 
+  platformName: 
   currentNumberOfItems: 0
 --- !u!65 &1610903915
 BoxCollider:
@@ -3137,10 +3110,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1577008768352069018, guid: 61b6c8a37272c9d4ba3644e5d63a2fd4,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1215686115}
     - targetCorrespondingSourceObject: {fileID: 9148594130271091382, guid: 61b6c8a37272c9d4ba3644e5d63a2fd4,
         type: 3}
       insertIndex: -1
@@ -3642,7 +3611,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveType: 0
   numberOfItems: 5
-  destroyOnFull: 1
+  destroyOnFull: 0
   rewardPrefab: {fileID: 0}
   objectName: 
   platformName: 
