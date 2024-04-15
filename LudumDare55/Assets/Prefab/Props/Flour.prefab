@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7430086972758313628
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1424699825931727265}
+  - component: {fileID: 205981731092624174}
+  m_Layer: 3
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1424699825931727265
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430086972758313628}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2880293095994697506}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &205981731092624174
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430086972758313628}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.15667355, y: 0.049746037, z: 0.06881237}
+  m_Center: {x: 0.0023410916, y: 0.2046814, z: 0.0067629814}
 --- !u!1001 &2338039123672776905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -81,7 +134,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
         type: 3}
       propertyPath: m_Name
-      value: LudumDareFlour
+      value: Flour
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
         type: 3}
@@ -100,7 +153,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b1cd444125c67e44c82e4b52264ea665, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
+        type: 3}
+      insertIndex: 0
+      addedObject: {fileID: 1424699825931727265}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
         type: 3}
@@ -110,11 +167,13 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 7492134768720427372}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9215098465121732205}
   m_SourcePrefab: {fileID: 100100000, guid: a7cbb6cb524d9e04ab5c38f22682ba0a, type: 3}
+--- !u!4 &2880293095994697506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2338039123672776905}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3220931232002375064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a7cbb6cb524d9e04ab5c38f22682ba0a,
@@ -169,24 +228,3 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.15780747, y: 0.17830968, z: 0.15709114}
   m_Center: {x: -0.00009256601, y: 0.08525586, z: 0.0014486313}
---- !u!65 &9215098465121732205
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220931232002375064}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.15667355, y: 0.049746037, z: 0.06881237}
-  m_Center: {x: 0.0023410916, y: 0.2046814, z: 0.0067629814}
