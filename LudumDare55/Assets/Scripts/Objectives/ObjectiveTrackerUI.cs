@@ -60,7 +60,18 @@ public class ObjectiveTrackerUI : MonoBehaviour
             // Make the text update automatically when the objetive text is updated
             objective.OnObjectiveTextUpdated += () => { uiText.text = objective.ObjectiveText; };
             // Strike through the text when the objective is completed
-            objective.OnObjectiveCompleted += () => { uiText.fontStyle = FontStyles.Strikethrough; };
+            objective.OnObjectiveCompleted += () =>
+            {
+                if (uiText.font.fallbackFontAssetTable != null && uiText.font.fallbackFontAssetTable.Count > 0)
+                {
+                    // I set the strike through font asset as a fallback asset on the font we are using for the objectives
+                    uiText.font = uiText.font.fallbackFontAssetTable[0];
+                }
+                else
+                {
+                    uiText.fontStyle = FontStyles.Strikethrough;
+                }
+            };
 
             // keep track of the objective and the text object
             objectives.Add(objective, uiText);

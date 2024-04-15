@@ -1,5 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2370674549498398135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5266886962165660984}
+  - component: {fileID: 3112454929578690107}
+  m_Layer: 3
+  m_Name: Collider
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5266886962165660984
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370674549498398135}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7169937877832076339}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3112454929578690107
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2370674549498398135}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.020847099, y: 0.02021561, z: 0.023357049}
+  m_Center: {x: -0.0000000045655826, y: -0.00031570112, z: -0.006712895}
 --- !u!1001 &7208580743976578008
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71,7 +124,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 43419a37a20d49345aff2314d1e8fedd,
         type: 3}
       propertyPath: m_Name
-      value: LudumDareMustard
+      value: Mustard
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 43419a37a20d49345aff2314d1e8fedd,
         type: 3}
@@ -85,7 +138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 43419a37a20d49345aff2314d1e8fedd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5266886962165660984}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43419a37a20d49345aff2314d1e8fedd,
         type: 3}
@@ -98,12 +155,14 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43419a37a20d49345aff2314d1e8fedd,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 7060480223633851945}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 43419a37a20d49345aff2314d1e8fedd,
-        type: 3}
-      insertIndex: -1
       addedObject: {fileID: 8293347132298232541}
   m_SourcePrefab: {fileID: 100100000, guid: 43419a37a20d49345aff2314d1e8fedd, type: 3}
+--- !u!4 &7169937877832076339 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 43419a37a20d49345aff2314d1e8fedd,
+    type: 3}
+  m_PrefabInstance: {fileID: 7208580743976578008}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7551248151877572233 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 43419a37a20d49345aff2314d1e8fedd,
@@ -158,27 +217,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0073892507, y: 0.006040151, z: 0.0046106107}
   m_Center: {x: -0.00013950365, y: -0.00031709348, z: 0.0071005877}
---- !u!65 &7060480223633851945
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7551248151877572233}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.020847099, y: 0.02021561, z: 0.023357049}
-  m_Center: {x: -0.0000000045655826, y: -0.00031570112, z: -0.006712895}
 --- !u!114 &8293347132298232541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,3 +237,5 @@ MonoBehaviour:
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0
   Launched: 0
+  source: {fileID: 0}
+  SoundSpeedThreshold: 1
