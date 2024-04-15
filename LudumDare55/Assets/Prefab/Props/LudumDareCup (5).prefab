@@ -104,6 +104,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 6495883695556782190}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4af0ad673d5982e4790d1b8108266918,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7783723553836471311}
   m_SourcePrefab: {fileID: 100100000, guid: 4af0ad673d5982e4790d1b8108266918, type: 3}
 --- !u!1 &1707246783352748424 stripped
 GameObject:
@@ -131,6 +135,8 @@ MonoBehaviour:
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0
   Launched: 0
+  source: {fileID: 0}
+  SoundSpeedThreshold: 1
 --- !u!54 &1944941576869842412
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -179,3 +185,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.024687659, y: 0.024687655, z: 0.018275857}
   m_Center: {x: 0.00000004656613, y: -0.0000000046566124, z: -0.00093555986}
+--- !u!114 &7783723553836471311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707246783352748424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0700399a9c6a2224b98cdaf98b535916, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakThreshold: 1.5
+  debrisPrefabs:
+  - {fileID: 2081328878789703126, guid: df139f7aefc184b4c9c437775777ae85, type: 3}
+  - {fileID: 7832440676114468337, guid: 9c20188a1646275408dcaa9c8dd3e10f, type: 3}
+  debrisSpacing: 0.1
+  isObjectiveItem: 0
