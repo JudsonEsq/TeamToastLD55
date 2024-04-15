@@ -5,8 +5,14 @@ using UnityEngine;
 public class UIWobble : MonoBehaviour
 {
     [SerializeField] private bool verticalWobble= true;
-    [SerializeField] private float WobbleSpeed = 1f;
+    [SerializeField] private float wobbleSpeed = 1f;
     [SerializeField] private float startValue = 0f;
+
+    [Header("Horizontal")]
+    [SerializeField] private bool horizontalWobble = false;
+    [SerializeField] private float horiSpeed = 1f;
+    [SerializeField] private float hstartValue = 0f;
+
     [Header("Rotation")]
     [Tooltip("Whether this object should also have rotational wobble")]
     [SerializeField] private bool rotateWobble = false;
@@ -33,12 +39,22 @@ public class UIWobble : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position += Vector3.up * Mathf.Sin(startValue) * WobbleSpeed;
-        startValue += 0.1f;
+        if(verticalWobble)
+        {
+            transform.position += Vector3.up * Mathf.Sin(startValue) * wobbleSpeed;
+            startValue += 0.1f;
+        }
+            
 
         if (rotateWobble)
         {
             transform.rotation = Quaternion.Euler(rotationRange * Mathf.Sin(startValue) * Vector3.forward);
+        }
+
+        if(horizontalWobble)
+        {
+            transform.position += Vector3.left * Mathf.Sin(hstartValue) * horiSpeed;
+            hstartValue += 0.1f;
         }
 
         if (scaleWobble)
