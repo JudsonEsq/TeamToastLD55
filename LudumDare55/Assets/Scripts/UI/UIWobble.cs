@@ -25,12 +25,6 @@ public class UIWobble : MonoBehaviour
     [SerializeField] private float scaleRange = 0.2f;
     private Vector3 initialScale;
 
-    public void ToggleWobble()
-    {
-        verticalWobble = !verticalWobble;
-    }
-
-
 
     private void Start()
     {
@@ -42,13 +36,12 @@ public class UIWobble : MonoBehaviour
         if(verticalWobble)
         {
             transform.position += Vector3.up * Mathf.Sin(startValue) * wobbleSpeed;
-            startValue += 0.1f;
         }
             
 
-        if (rotateWobble)
+        if(rotateWobble)
         {
-            transform.rotation = Quaternion.Euler(rotationRange * Mathf.Sin(startValue) * Vector3.forward);
+            gameObject.GetComponent<RectTransform>().rotation = Quaternion.Euler(rotationRange * Mathf.Sin(startValue * rotationalSpeed) * Vector3.forward);
         }
 
         if(horizontalWobble)
@@ -62,5 +55,7 @@ public class UIWobble : MonoBehaviour
             transform.localScale = initialScale * (1 + scaleRange * Mathf.Sin(startValue * scaleSpeed));
         }
 
+
+        startValue += 0.1f;
     }
 }
