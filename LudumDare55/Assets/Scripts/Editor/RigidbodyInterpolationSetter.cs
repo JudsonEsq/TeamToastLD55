@@ -7,17 +7,20 @@ public class RigidbodyInterpolationSetter : Editor
 	public static void SetRigidbodyInterpolation()
 	{
 		// Get all Rigidbody components in the scene
-		Rigidbody[] rigidbodies = FindObjectsOfType<Rigidbody>();
-		Debug.Log("Found " + rigidbodies.Length + " Rigidbody components in the scene.");
+		// find every selected object in the scene
+		GameObject[] objs =  Selection.gameObjects;
 		
 		// Iterate over each Rigidbody
-		foreach (Rigidbody rb in rigidbodies)
+		foreach (GameObject obj in objs)
 		{
+			Rigidbody rb = obj.GetComponent<Rigidbody>();
+			if (rb)
+			{
+				// Set the Rigidbody's interpolation to Interpolate
+				rb.interpolation = RigidbodyInterpolation.Interpolate;
+				Debug.Log("Set Rigidbody interpolation to Interpolate for " + obj.name);
+			}
 
-			Debug.Log("Setting interpolation mode for Rigidbody on " + rb.gameObject.name);
-			// If it does, set its interpolation mode to Interpolate
-			rb.interpolation = RigidbodyInterpolation.Interpolate;
-			
 		}
 	}
 }

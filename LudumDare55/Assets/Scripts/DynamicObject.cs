@@ -37,6 +37,9 @@ public class DynamicObject : MonoBehaviour {
 	
 	GameObject _grabber;
 
+	public void Start () {
+		RigidBody.interpolation = RigidbodyInterpolation.Interpolate;
+	}
 
 	#region Grabbing
 
