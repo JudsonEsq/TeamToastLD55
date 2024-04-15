@@ -465,6 +465,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7984945196811633380, guid: 733ad2a460af111408eb684915262454,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -607,7 +612,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &48608709
@@ -665,6 +670,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 4021588475906354024, guid: aa6628da73c765a408e361d76e0c3cb9,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4625897335142917851, guid: aa6628da73c765a408e361d76e0c3cb9,
         type: 3}
       propertyPath: AdditionalHoldDistance
@@ -830,6 +840,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7815021280657283261, guid: 787170fa4d2c0da468c6bf68ff6342cf,
         type: 3}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1072,7 +1087,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &87678448
@@ -1378,6 +1393,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareBox (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1403,6 +1423,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 2169929706026756085, guid: b8a777cc7cbfd194fae1f3a3c866aeab,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8244825109152099248, guid: b8a777cc7cbfd194fae1f3a3c866aeab,
         type: 3}
       propertyPath: m_Name
@@ -1792,7 +1817,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &154134558
@@ -1922,6 +1947,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jar (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975242476563094893, guid: 678850f1a6f425a428d3cb26d3c042c4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7683915388836189465, guid: 678850f1a6f425a428d3cb26d3c042c4,
         type: 3}
@@ -2354,7 +2384,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!65 &210888541
@@ -2540,7 +2570,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &211417892
@@ -2625,6 +2655,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394362500922126222, guid: 1928032319a5ccc48992a364cb40b95c,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3104,7 +3139,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &235761250
@@ -3206,6 +3241,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareCup (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6659337977525153235, guid: 6f8ca97c642b8494a8ca83617eac5dc8,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3279,6 +3319,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Flour
+      objectReference: {fileID: 0}
+    - target: {fileID: 7467613871861798023, guid: 1cfb0191247b51b4e8c8de88fce2239a,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3647,7 +3692,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &285291150
@@ -3754,6 +3799,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984945196811633380, guid: 733ad2a460af111408eb684915262454,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4171,7 +4221,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &383696303
@@ -4650,6 +4700,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jar (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975242476563094893, guid: 678850f1a6f425a428d3cb26d3c042c4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7683915388836189465, guid: 678850f1a6f425a428d3cb26d3c042c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5062,7 +5117,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &488341499
@@ -5461,6 +5516,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDarePlate (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 7813071936226532169, guid: 2578cd4c345ed104782eb23906ede648,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5694,6 +5754,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 3775254883724534882, guid: ac3a1581089220547ab6dd3b61c1d423,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7250260832428189522, guid: ac3a1581089220547ab6dd3b61c1d423,
         type: 3}
       propertyPath: m_Name
@@ -6142,6 +6207,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6394362500922126222, guid: 1928032319a5ccc48992a364cb40b95c,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6289,7 +6359,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &549268193
@@ -6480,7 +6550,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &585308826
@@ -6661,7 +6731,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &591748295
@@ -6790,6 +6860,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7815021280657283261, guid: 787170fa4d2c0da468c6bf68ff6342cf,
         type: 3}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6963,7 +7038,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &648928769
@@ -6998,6 +7073,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jar (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975242476563094893, guid: 678850f1a6f425a428d3cb26d3c042c4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7683915388836189465, guid: 678850f1a6f425a428d3cb26d3c042c4,
         type: 3}
@@ -7090,6 +7170,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jar
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975242476563094893, guid: 678850f1a6f425a428d3cb26d3c042c4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7683915388836189465, guid: 678850f1a6f425a428d3cb26d3c042c4,
         type: 3}
@@ -7507,6 +7592,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2505642851634945670, guid: 1bebe2f8b113c1c4e9842fdd121dc632,
         type: 3}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7654,7 +7744,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &717595590
@@ -7760,6 +7850,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDareRecipeBook 1 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140409266939597956, guid: c111693c0149dc74686733efe2a02132,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -7909,7 +8004,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &752039185
@@ -8959,6 +9054,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6394362500922126222, guid: 1928032319a5ccc48992a364cb40b95c,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9061,6 +9161,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2505642851634945670, guid: 1bebe2f8b113c1c4e9842fdd121dc632,
         type: 3}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9806,7 +9911,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &925177568
@@ -9837,6 +9942,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 7505842908828440079, guid: f2a319bb89a30074a8f8ff917ae37107,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8642980560456322430, guid: f2a319bb89a30074a8f8ff917ae37107,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9905,6 +10015,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 7505842908828440079, guid: f2a319bb89a30074a8f8ff917ae37107,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8642980560456322430, guid: f2a319bb89a30074a8f8ff917ae37107,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -10688,6 +10803,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -2505642851634945670, guid: 1bebe2f8b113c1c4e9842fdd121dc632,
         type: 3}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11023,7 +11143,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &995846931
@@ -11276,6 +11396,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareRecipeBook 1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8140409266939597956, guid: c111693c0149dc74686733efe2a02132,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -11373,6 +11498,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 3775254883724534882, guid: ac3a1581089220547ab6dd3b61c1d423,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7250260832428189522, guid: ac3a1581089220547ab6dd3b61c1d423,
         type: 3}
       propertyPath: m_Name
@@ -11829,6 +11959,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8769961274929834075, guid: 985d0e0658f316f49ba0c7327572e503,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9124169295185160882, guid: 985d0e0658f316f49ba0c7327572e503,
         type: 3}
       propertyPath: m_Name
@@ -11976,7 +12111,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1075158761
@@ -12188,7 +12323,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1108787971
@@ -12440,6 +12575,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDareCup (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944941576869842412, guid: ee98ffba78bd64d40a0ea363b4a98f14,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2088134535422894898, guid: ee98ffba78bd64d40a0ea363b4a98f14,
         type: 3}
@@ -12757,7 +12897,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1136079095
@@ -12859,6 +12999,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 7815021280657283261, guid: 787170fa4d2c0da468c6bf68ff6342cf,
         type: 3}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -13216,7 +13361,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1188446602
@@ -13465,6 +13610,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8769961274929834075, guid: 985d0e0658f316f49ba0c7327572e503,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9124169295185160882, guid: 985d0e0658f316f49ba0c7327572e503,
         type: 3}
       propertyPath: m_Name
@@ -13638,7 +13788,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1219907121
@@ -13720,7 +13870,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1220971225
@@ -13820,7 +13970,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!4 &1228567963 stripped
@@ -14645,6 +14795,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDareRecipeBook 1 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8140409266939597956, guid: c111693c0149dc74686733efe2a02132,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15809,6 +15964,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Jar (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3975242476563094893, guid: 678850f1a6f425a428d3cb26d3c042c4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7683915388836189465, guid: 678850f1a6f425a428d3cb26d3c042c4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15949,6 +16109,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareBox (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -16062,6 +16227,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 254527952883454655, guid: 0f3c10930b753de4cbd2a954e17ea8dd,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7031311347443167265, guid: 0f3c10930b753de4cbd2a954e17ea8dd,
         type: 3}
       propertyPath: m_Name
@@ -16359,7 +16529,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1528214246
@@ -16659,7 +16829,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1538967420
@@ -17262,6 +17432,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 1792202264491971282, guid: 33344616ec3754445a34e1aa5832ca39,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2333972026633970708, guid: 33344616ec3754445a34e1aa5832ca39,
         type: 3}
       propertyPath: m_Name
@@ -17406,6 +17581,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 7827901163463481837, guid: c6d6e2594625a7e49b281d1015a9b152,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17499,6 +17679,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 138732134792019651, guid: e4ec9a58b696d474baaa83d44d3fab27,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5035591711568106603, guid: e4ec9a58b696d474baaa83d44d3fab27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17733,6 +17918,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6394362500922126222, guid: 1928032319a5ccc48992a364cb40b95c,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -17907,7 +18097,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1661892689
@@ -18265,7 +18455,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1697616714
@@ -18526,7 +18716,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1732319028
@@ -18642,6 +18832,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 19.222
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827901163463481837, guid: c6d6e2594625a7e49b281d1015a9b152,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18868,6 +19063,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8968662358556172767, guid: 559e4fb39c8c63b4391a263b29d4ae5b,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9060487993963088512, guid: 559e4fb39c8c63b4391a263b29d4ae5b,
         type: 3}
       propertyPath: m_Name
@@ -19027,7 +19227,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1781445360
@@ -19208,7 +19408,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1785793399
@@ -19264,6 +19464,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDareCup (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944941576869842412, guid: ee98ffba78bd64d40a0ea363b4a98f14,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2088134535422894898, guid: ee98ffba78bd64d40a0ea363b4a98f14,
         type: 3}
@@ -19473,7 +19678,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1799436249
@@ -19704,6 +19909,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8769961274929834075, guid: 985d0e0658f316f49ba0c7327572e503,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9124169295185160882, guid: 985d0e0658f316f49ba0c7327572e503,
         type: 3}
       propertyPath: m_Name
@@ -19826,6 +20036,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Jar (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3975242476563094893, guid: 678850f1a6f425a428d3cb26d3c042c4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7683915388836189465, guid: 678850f1a6f425a428d3cb26d3c042c4,
         type: 3}
@@ -20062,7 +20277,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1893086337
@@ -20147,6 +20362,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7984945196811633380, guid: 733ad2a460af111408eb684915262454,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -20420,6 +20640,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareCup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6659337977525153235, guid: 6f8ca97c642b8494a8ca83617eac5dc8,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -20641,7 +20866,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &1950601022
@@ -20705,6 +20930,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 7505842908828440079, guid: f2a319bb89a30074a8f8ff917ae37107,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8642980560456322430, guid: f2a319bb89a30074a8f8ff917ae37107,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -20920,6 +21150,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 3775254883724534882, guid: ac3a1581089220547ab6dd3b61c1d423,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7250260832428189522, guid: ac3a1581089220547ab6dd3b61c1d423,
         type: 3}
       propertyPath: m_Name
@@ -21249,7 +21484,7 @@ Rigidbody:
   m_ImplicitTensor: 1
   m_UseGravity: 1
   m_IsKinematic: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &2010443099
@@ -21633,6 +21868,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareRecipeBook 1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 8140409266939597956, guid: c111693c0149dc74686733efe2a02132,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21718,6 +21958,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 99ed1dd41d0bcc74aa6bd0505bb5784f, type: 2}
+    - target: {fileID: 7450183436466378769, guid: a894a9a88a21a23488eab2d269455048,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -22113,6 +22358,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 4021588475906354024, guid: aa6628da73c765a408e361d76e0c3cb9,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4625897335142917851, guid: aa6628da73c765a408e361d76e0c3cb9,
         type: 3}
       propertyPath: AdditionalHoldDistance
@@ -22205,6 +22455,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDareCup (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1944941576869842412, guid: ee98ffba78bd64d40a0ea363b4a98f14,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2088134535422894898, guid: ee98ffba78bd64d40a0ea363b4a98f14,
         type: 3}
@@ -22323,6 +22578,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6394362500922126222, guid: 1928032319a5ccc48992a364cb40b95c,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22523,6 +22783,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8968662358556172767, guid: 559e4fb39c8c63b4391a263b29d4ae5b,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9060487993963088512, guid: 559e4fb39c8c63b4391a263b29d4ae5b,
         type: 3}
       propertyPath: m_Name
@@ -22605,6 +22870,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 7827901163463481837, guid: c6d6e2594625a7e49b281d1015a9b152,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22743,6 +23013,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 369843920801723661, guid: f98234159f001894ea4b484548d23be8,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1094594978178901842, guid: f98234159f001894ea4b484548d23be8,
         type: 3}
       propertyPath: m_Name
@@ -22761,6 +23036,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 2978962957186700422, guid: fc363a58a1dc9534984a3bc7d5004478,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5754565520074795357, guid: fc363a58a1dc9534984a3bc7d5004478,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -22834,6 +23114,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 1792202264491971282, guid: 33344616ec3754445a34e1aa5832ca39,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2333972026633970708, guid: 33344616ec3754445a34e1aa5832ca39,
         type: 3}
       propertyPath: m_Name
@@ -22951,6 +23236,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8769961274929834075, guid: 985d0e0658f316f49ba0c7327572e503,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9124169295185160882, guid: 985d0e0658f316f49ba0c7327572e503,
         type: 3}
@@ -23265,6 +23555,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareBox (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4967537696801749606, guid: 8acfb380221212045875beac8ed571e7,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23432,6 +23727,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 2169929706026756085, guid: b8a777cc7cbfd194fae1f3a3c866aeab,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8244825109152099248, guid: b8a777cc7cbfd194fae1f3a3c866aeab,
         type: 3}
       propertyPath: m_Name
@@ -23651,6 +23951,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 138732134792019651, guid: e4ec9a58b696d474baaa83d44d3fab27,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5035591711568106603, guid: e4ec9a58b696d474baaa83d44d3fab27,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -23857,6 +24162,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6045214208599391202, guid: 21d72f86601cf084181fe256e8b395b4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -23870,6 +24180,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 7505842908828440079, guid: f2a319bb89a30074a8f8ff917ae37107,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8642980560456322430, guid: f2a319bb89a30074a8f8ff917ae37107,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24091,6 +24406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Mass
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 5273236757039300313, guid: e90aa06fc26e4024488ed5723fc39ac4,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24370,6 +24690,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7984945196811633380, guid: 733ad2a460af111408eb684915262454,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24580,6 +24905,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LudumDareRecipeBook 1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8140409266939597956, guid: c111693c0149dc74686733efe2a02132,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -24653,6 +24983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDarePlate (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7813071936226532169, guid: 2578cd4c345ed104782eb23906ede648,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -24735,6 +25070,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 980439962}
     m_Modifications:
+    - target: {fileID: 66446308626486412, guid: 2fca24d9015ccad4eb8cbe1b0e02e6f2,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4978760343041527521, guid: 2fca24d9015ccad4eb8cbe1b0e02e6f2,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -24935,6 +25275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LudumDareCup (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6659337977525153235, guid: 6f8ca97c642b8494a8ca83617eac5dc8,
+        type: 3}
+      propertyPath: m_Interpolate
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

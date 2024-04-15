@@ -1,5 +1,6 @@
 #region
 
+using System.Linq;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 using UnityEngine.Serialization;
@@ -77,7 +78,6 @@ public class DynamicObjectMover : MonoBehaviour {
 	bool _wasKinematic;
 	Collider _collider;
 	float _drainTimer;
-	public Collider[] Colliders = new Collider[16];
 
 	DynamicObject _teleObject;
 	bool _hadObject;
@@ -236,28 +236,31 @@ public class DynamicObjectMover : MonoBehaviour {
 		}
 		// if the raycast didn't hit, do an overlap sphere to find a grabbable object
 		if (CameraController.EnvironmentRaycast(out RaycastHit envHit, MaximumGrabDistance)) {
-			int count = Physics.OverlapSphereNonAlloc(envHit.point, 5, Colliders, GrabLayerMask);
+			Collider[] colliders = Physics.OverlapSphere(envHit.point, 2.5f, GrabLayerMask);
+			int count = colliders.Length;
+			Debug.Log(count);
 			if (count > 0) {
 				// find the closest collider
+				Vector2[] points = new Vector2[count];
+				for (int i = 0; i < count; i++) {
+					points[i] = CameraController.WorldToScreenPoint(colliders[i].transform.position);
+				}
+				// find the closest point to the center of the screen
+				Vector2 center = CameraController.WorldToScreenPoint(envHit.point);
+				// draw a 2d line from the center of the screen to the closest point
+				
 				Collider closest = null;
 				float distance = float.MaxValue;
 				for (int i = 0; i < count; i++) {
-					Collider c = Colliders[i];
-					if (!c) continue;
-
-					// filter out objects that we can't see
-					Renderer r = c.GetComponentInChildren<Renderer>();
-					if (!r) continue;
-					if (!r.isVisible) continue;
-					//if (Physics.Raycast(CameraController.Position, c.transform.position - CameraController.Position, out RaycastHit hit2, MaximumGrabDistance, LayerMask.GetMask("Environment"))) continue;
-					// sort based on distance to the hit point
-					float d = Vector3.Distance(c.transform.position, envHit.point);
-					if (d < distance) {
-						distance = d;
-						closest = c;
+					float dist = Vector2.Distance(center, points[i]);
+					if (dist < distance) {
+						distance = dist;
+						closest = colliders[i];
 					}
 				}
+
 				if (closest) {
+					Debug.DrawLine(envHit.point, closest.transform.position, Color.green, 5);
 					SetObject(closest);
 					_hitOffsetLocal = envHit.transform.InverseTransformVector(envHit.point - envHit.transform.position);
 				}
