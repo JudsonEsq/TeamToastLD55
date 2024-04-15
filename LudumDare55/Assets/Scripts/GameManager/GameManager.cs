@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private ObjectiveManager currentObjectiveManager;
 
     // Gives time to any methods that are subscribed to the level transiton event, and allows then to run before the new scene is loaded.
-    [SerializeField] private float playableLevelTransitionDelay = 0f;
+    [SerializeField] private float gameCompleteTransitionDelay = 0f;
 
     private void Awake()
     {
@@ -70,17 +70,17 @@ public class GameManager : MonoBehaviour
     // What happens when you are on a playable level and complete all objectives
     private void UpdateOnCompleteAllObjectives()
     {
-        // Transition to next playable level
+        // Transition to the end/victory scene 
         if (LevelManager.Instance != null)
         {
-            LevelManager.Instance.TransitionLevel(playableLevelTransitionDelay, LevelManager.LevelTransition.Passed);
+            LevelManager.Instance.GameComplete(gameCompleteTransitionDelay);
         }
     }
 
     // This is called when the Level transition event is triggered
     private void HandleLevelTransition(LevelManager.LevelTransition transitionType)
     {
-        if (transitionType != LevelManager.LevelTransition.Passed)
+        if (transitionType != LevelManager.LevelTransition.NewGame)
         {
             SetObjectiveManager(null);
         }

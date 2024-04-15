@@ -17,8 +17,7 @@ public class LevelManager : MonoBehaviour
         None,
         NewGame,
         MainMenu,
-        Failed,
-        Passed,
+        Completed,
     }
 
     // Any method that needs to know about a level transition can subscribe to this
@@ -27,21 +26,18 @@ public class LevelManager : MonoBehaviour
     // have the methods subscribed to this event run before the scene change
     public Action<LevelTransition> OnLevelTransitioned;
 
-    // This is called when the final level is passed
-    public Action OnCompleteAllLevels;
 
     [Header("Level Settings")]
 #if UNITY_EDITOR
     [SerializeField] private SceneAsset mainMenuLevel;
-    [SerializeField] private SceneAsset gameOverLevel;
-    [SerializeField] private List<SceneAsset> playableLevels = new();
+    [SerializeField] private SceneAsset playableLevel;
+    [SerializeField] private SceneAsset endLevel;
 #endif
 
     [Header("Debug")]
-    [SerializeField] private int currentPlayableLevel = -1;
     [SerializeField] private string mainMenuLevelName;
-    [SerializeField] private string gameOverLevelName;
-    [SerializeField] private List<string> playableLevelNames = new();
+    [SerializeField] private string playableLevelName;
+    [SerializeField] private string endLevelName;
 
 
     private void OnValidate()
@@ -75,68 +71,19 @@ public class LevelManager : MonoBehaviour
         {
             mainMenuLevelName = mainMenuLevel.name;
         }
-        if (gameOverLevel != null)
+        if (playableLevel != null)
         {
-            gameOverLevelName = gameOverLevel.name;
+            playableLevelName = playableLevel.name;
         }
-
-        if (playableLevels.Count == 0) return;
-        playableLevelNames.Clear();
-        for (int i = 0; i < playableLevels.Count; i++)
+        if (endLevel != null)
         {
-            if (playableLevels[i] == null)
-            {
-                Debug.LogError("A playable level is null");
-                playableLevelNames.Clear();
-                return;
-            }
-
-            playableLevelNames.Add(playableLevels[i].name);
+            endLevelName = endLevel.name;
         }
 
         //Debug.Log("Update scene names");
     }
 #endif
 
-    private void Start()
-    {
-        // if you start on a playable level, set the correct index
-        if (Instance == this)
-        {
-            var currentScene = SceneManager.GetActiveScene();
-            if (playableLevelNames.Count == 0) return;
-
-            var sceneName = playableLevelNames.Find(x => x == currentScene.name);
-            if (!string.IsNullOrEmpty(sceneName))
-            {
-                currentPlayableLevel = playableLevelNames.IndexOf(sceneName);
-            }
-        }
-    }
-
-    private void Update()
-    {
-        // Solely for testing purposes
-        /*if (Input.GetKeyDown(KeyCode.L))
-        {
-            GameOver();
-        }
-
-        if (Input.GetKeyDown(KeyCode.I))
-        {
-            LoadMainMenu();
-        }
-
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            NewGame();
-        }
-
-        if (Input.GetKeyDown(KeyCode.O))
-        {
-            TransitionLevel(0f, LevelTransition.Passed);
-        }*/
-    }
 
     public void NewGame(float delay = 0f)
     {
@@ -148,13 +95,13 @@ public class LevelManager : MonoBehaviour
         TransitionLevel(delay, LevelTransition.MainMenu);
     }
 
-    public void GameOver(float delay = 0f)
+    public void GameComplete(float delay = 0f)
     {
-        TransitionLevel(delay, LevelTransition.Failed);
+        TransitionLevel(delay, LevelTransition.Completed);
     }
 
 
-    public void TransitionLevel(float delay = 0f, LevelTransition transitionType = LevelTransition.None)
+    private void TransitionLevel(float delay = 0f, LevelTransition transitionType = LevelTransition.None)
     {
         if (transitioning) return;
 
@@ -163,40 +110,21 @@ public class LevelManager : MonoBehaviour
         {
             default:
             case LevelTransition.None:
-                currentPlayableLevel = -1;
                 break;
             case LevelTransition.NewGame:
-                if (playableLevelNames.Count == 0 || playableLevelNames[0] == null) return;
+                if (string.IsNullOrEmpty(playableLevelName)) return;
 
-                sceneName = playableLevelNames[0];
-                currentPlayableLevel = 0;
+                sceneName = playableLevelName;
                 break;
             case LevelTransition.MainMenu:
                 if (string.IsNullOrEmpty(mainMenuLevelName)) return;
 
                 sceneName = mainMenuLevelName;
-                currentPlayableLevel = -1;
                 break;
-            case LevelTransition.Failed:
-                if (string.IsNullOrEmpty(gameOverLevelName)) return;
+            case LevelTransition.Completed:
+               if (string.IsNullOrEmpty(endLevelName)) return;
 
-                sceneName = gameOverLevelName;
-                currentPlayableLevel = -1;
-                break;
-            case LevelTransition.Passed:
-                if (playableLevelNames.Count == 0) return;
-                if (currentPlayableLevel == playableLevelNames.Count - 1)
-                {
-                    // Trigger the event and tell all subscribers all the levels have been completed to prompt what to do next
-                    // An example will be to connect this to a UI, which will then give the option to call the NewGame or MainMenu transition
-                    OnCompleteAllLevels?.Invoke();
-                    return;
-                }
-
-                currentPlayableLevel++;
-                if (playableLevelNames.Count < currentPlayableLevel || playableLevelNames[currentPlayableLevel] == null) return;
-
-                sceneName = playableLevelNames[currentPlayableLevel];
+                sceneName = endLevelName;
                 break;
         }
 
