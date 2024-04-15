@@ -26,6 +26,7 @@ public class DynamicObject : MonoBehaviour {
 
 	public bool Launched;
 
+	
 	public bool IsGrabbed { get; private set; }
 	public bool CanBeGrabbed => !IsGrabbed;
 	public bool IsGrounded { get; private set; }
@@ -36,8 +37,16 @@ public class DynamicObject : MonoBehaviour {
 	bool _touching;
 	
 	GameObject _grabber;
+	
+	[Header("Sound")]
+	public AudioController AudioController;
+	public string SoundName = "";
+	public float SoundSpeedThreshold = 2f;
 
 	public void Start () {
+		if (!AudioController) 
+			AudioController = GetComponent<AudioController>();
+		
 		RigidBody.interpolation = RigidbodyInterpolation.Interpolate;
 	}
 
@@ -79,6 +88,9 @@ public class DynamicObject : MonoBehaviour {
 		// if we hit something and we've just been launched
 		if (Launched && !IsGrabbed) {
 			OnCollisionHit.Invoke();
+		}
+		if (_lastSpeed >= SoundSpeedThreshold && AudioController && !string.IsNullOrEmpty(SoundName)) {
+			AudioController.Play(SoundName);
 		}
 	}
 	
