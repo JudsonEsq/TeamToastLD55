@@ -1307,19 +1307,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Height: 2
-  m_Radius: 0.5
-  m_SlopeLimit: 45
-  m_StepOffset: 0
-  m_SkinWidth: 0.08
-  m_MinMoveDistance: 0.001
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1463563086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1489973007
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1494,7 +1483,7 @@ PrefabInstance:
         type: 3}
       propertyPath: cameraTransform
       value: 
-      objectReference: {fileID: 1465519859}
+      objectReference: {fileID: 0}
     - target: {fileID: 5162336708804520254, guid: 80e0db454ecb8ba4eaf85a4844bd837a,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1557,7 +1546,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveType: 1
   numberOfItems: 15
-  destroyOnFull: 0
 --- !u!65 &1610903915
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1678,7 +1666,8 @@ PrefabInstance:
       value: 0.443
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 4319087977657825444, guid: d7f1c29419eecbd40ac27a866af99936, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7f1c29419eecbd40ac27a866af99936, type: 3}
@@ -2053,9 +2042,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: TEST TEXT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 205ce6743430a0e4090bcb18df95efbd, type: 2}
-  m_sharedMaterial: {fileID: -7919038492755331644, guid: 205ce6743430a0e4090bcb18df95efbd,
-    type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2176,7 +2164,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveType: 0
   numberOfItems: 5
-  destroyOnFull: 1
 --- !u!65 &2090371470
 BoxCollider:
   m_ObjectHideFlags: 0
