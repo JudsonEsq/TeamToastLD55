@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jude/MainMenu.unity
     guid: ad9f3574f9a2ae245b65fce5587849e9
+  - enabled: 1
+    path: Assets/Scenes/Jude/Lvl1_Pickles.unity
+    guid: 1cb7a986ed4d5484bac028d691a80ba0
   m_configObjects: {}
