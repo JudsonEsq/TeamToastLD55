@@ -15,6 +15,12 @@ public class MoveObject : Objective
     }
     [SerializeField] private MoveType moveType;
     [SerializeField] private int numberOfItems = 1;
+
+    [SerializeField] private bool destroyOnFull = false;
+    [Tooltip("The prefab to spawn when this objective is completed, if destroyOnFull is true")]
+    [SerializeField] private GameObject rewardPrefab;
+
+    private GameObject[] containedObjects;
     private int currentNumberOfItems;
 
     protected override void Start()
@@ -26,6 +32,10 @@ public class MoveObject : Objective
             default:
             case MoveType.Place:
                 currentNumberOfItems = 0;
+                if(destroyOnFull)
+                {
+                    containedObjects = new GameObject[numberOfItems];
+                }
                 break;
             case MoveType.Remove:
                 currentNumberOfItems = numberOfItems;
@@ -40,6 +50,16 @@ public class MoveObject : Objective
         {
             default:
             case MoveType.Place:
+                if(destroyOnFull && currentNumberOfItems >= numberOfItems)
+                {
+                    foreach(GameObject obj in containedObjects)
+                    {
+                        Destroy(obj);
+                    }
+                    destroyOnFull = false;
+                    // Just make this true forever once we've destroyed everything inside
+                    currentNumberOfItems = 5 * numberOfItems;
+                }    
                 return currentNumberOfItems >= numberOfItems;
             case MoveType.Remove:
                 return currentNumberOfItems <= 0;
@@ -56,6 +76,10 @@ public class MoveObject : Objective
             // Incase the player drops an interactable object back in, register it once again
             if (currentNumberOfItems < numberOfItems)
             {
+                if (destroyOnFull)
+                {
+                    containedObjects[currentNumberOfItems] = other.gameObject;
+                }
                 //Debug.Log($"Added {other.name}");
                 currentNumberOfItems++;
             }
@@ -69,6 +93,23 @@ public class MoveObject : Objective
         // The tag can later be set to whatever, but should be the same as whatever object we are testing for
         if (other.gameObject.CompareTag("Interactable"))
         {
+            // Remove that item from the array of contained objects if we're using it.
+            if(destroyOnFull)
+            {
+                for(int i = 0; i < containedObjects.Length; i++)
+                {
+                    if (containedObjects[i] == null)
+                    {
+                        break;
+                    }
+
+                    if(containedObjects[i].Equals(other.gameObject))
+                    {
+                        containedObjects[i] = null;
+                        break;
+                    }
+                }
+            }
             // When the player removes an object
             if (currentNumberOfItems > 0)
             {

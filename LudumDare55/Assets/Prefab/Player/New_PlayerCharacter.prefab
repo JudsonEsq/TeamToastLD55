@@ -2347,7 +2347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c98177c66feff45448fdeedd018c36b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ThrowForce: 5
+  ThrowForce: 20
   GrabLayerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -2355,7 +2355,7 @@ MonoBehaviour:
   Handimator: {fileID: 2025864502754949983}
   MinimumObjectDistance: 1
   MinimumObjectDistanceMoving: 1.5
-  MaximumGrabDistance: 25
+  MaximumGrabDistance: 5
   Multiplier: 1
   DeltaTimeMultiplier: 0.3
 --- !u!114 &2194209476328938668

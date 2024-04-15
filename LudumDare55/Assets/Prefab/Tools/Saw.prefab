@@ -225,7 +225,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   RigidBody: {fileID: 3418264710080015554}
-  OptimalHoldRotation: {x: 0, y: 0, z: 0, w: 0}
+  OptimalHoldRotation: {x: 0.49999997, y: -0.49999997, z: 0.49999997, w: 0.49999997}
   LaunchDirection: {x: 0, y: 0, z: 0}
   AdditionalHoldDistance: 0
   Launched: 0
