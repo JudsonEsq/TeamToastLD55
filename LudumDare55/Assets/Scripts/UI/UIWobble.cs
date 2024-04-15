@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UIWobble : MonoBehaviour
 {
+    [SerializeField] private bool verticalWobble= true;
     [SerializeField] private float WobbleSpeed = 1f;
     [SerializeField] private float startValue = 0f;
     [Header("Rotation")]
@@ -17,6 +18,11 @@ public class UIWobble : MonoBehaviour
     [SerializeField] private float scaleSpeed = 1f;
     [SerializeField] private float scaleRange = 0.2f;
     private Vector3 initialScale;
+
+    public void ToggleWobble()
+    {
+        verticalWobble = !verticalWobble;
+    }
 
 
 
