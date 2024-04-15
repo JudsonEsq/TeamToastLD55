@@ -94,8 +94,8 @@ public class DynamicObjectMover : MonoBehaviour {
 
 	void Start () {
 		_movement = GetComponent<PlayerMovement>();
-		// we sub the before refresh event so that we can release the object and then
-		// have it set its position and velocity and have that velocity and position be unmodified
+
+		
 		CameraController = CameraController.Instance;
 
 		if (!CameraController) {
