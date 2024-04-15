@@ -1939,7 +1939,7 @@ PrefabInstance:
     - target: {fileID: 3928421236563819380, guid: a687595c7481531438eaadef0d275fea,
         type: 3}
       propertyPath: gameCompleteTransitionDelay
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3928421236563819380, guid: a687595c7481531438eaadef0d275fea,
         type: 3}
@@ -4942,71 +4942,10 @@ PrefabInstance:
       propertyPath: objectiveManager
       value: 
       objectReference: {fileID: 436382882}
-    - target: {fileID: 1696789184103287836, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c4a2611ce56dabf45a075efcaa8c140f,
-        type: 3}
     - target: {fileID: 2420957112191020507, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
       propertyPath: m_Name
       value: Objective Tracker
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740565374063342677, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 600
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740565374063342677, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740565374063342677, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1.2383
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740565374063342677, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 348.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2740565374063342677, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -148
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.93
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.57360554
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -89
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 105
-      objectReference: {fileID: 0}
-    - target: {fileID: 4130489559033235412, guid: 071f13f07c750f94d8331cd38e199bb3,
-        type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7230642418738028771, guid: 071f13f07c750f94d8331cd38e199bb3,
         type: 3}
