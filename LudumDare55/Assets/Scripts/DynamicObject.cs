@@ -39,13 +39,12 @@ public class DynamicObject : MonoBehaviour {
 	GameObject _grabber;
 	
 	[Header("Sound")]
-	public AudioController AudioController;
-	public string SoundName = "";
-	public float SoundSpeedThreshold = 2f;
+	public AudioSource source;
+	public float SoundSpeedThreshold = 1f;
 
 	public void Start () {
-		if (!AudioController) 
-			AudioController = GetComponent<AudioController>();
+
+		source = this.GetComponent<AudioSource>();
 		
 		RigidBody.interpolation = RigidbodyInterpolation.Interpolate;
 	}
@@ -89,8 +88,9 @@ public class DynamicObject : MonoBehaviour {
 		if (Launched && !IsGrabbed) {
 			OnCollisionHit.Invoke();
 		}
-		if (_lastSpeed >= SoundSpeedThreshold && AudioController && !string.IsNullOrEmpty(SoundName)) {
-			AudioController.Play(SoundName);
+		if (_lastSpeed >= SoundSpeedThreshold && source != null) {
+			source.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+			source.Play();
 		}
 	}
 	

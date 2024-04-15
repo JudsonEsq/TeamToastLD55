@@ -5,16 +5,20 @@ using UnityEngine;
 public class MusicChange : MonoBehaviour
 {
     [SerializeField]
-    private AudioClip music1;
+    private float volume = 0.3f;
+
     [SerializeField]
-    private AudioClip music2;
+    private AudioSource music1;
     [SerializeField]
-    private AudioClip music3;
+    private AudioSource music2;
+    [SerializeField]
+    private AudioSource music3;
 
     [SerializeField]
     private ObjectiveManager objMan;
 
     private AudioSource musicSource;
+
     private float currentTime = 0;
 
     private int musicIndex = 0;
@@ -22,7 +26,13 @@ public class MusicChange : MonoBehaviour
     // Update is called once per frame
     void Start()
     {
-        musicSource = gameObject.GetComponent<AudioSource>();
+        musicSource = music1;
+        music2.volume = 0;
+        music3.volume = 0;
+
+        musicSource.Play();
+        music2.Play();
+        music3.Play();
 
         if (objMan != null)
         {
@@ -33,6 +43,24 @@ public class MusicChange : MonoBehaviour
         }
     }
 
+    IEnumerator FadeIn(AudioSource nextSong)
+    {
+        while(nextSong.volume < volume)
+        {
+            nextSong.volume += .003f;
+            yield return null;
+        }
+    }
+
+    IEnumerator FadeOut(AudioSource lastSong)
+    {
+        while (lastSong.volume > 0)
+        {
+            lastSong.volume -= .003f;
+            yield return null;
+        }
+    }
+
     void IncrementMusic()
     {
         musicIndex++;
@@ -40,16 +68,17 @@ public class MusicChange : MonoBehaviour
         switch (musicIndex)
         {
             case 0:
-                musicSource.clip = music1;
+                StartCoroutine(FadeOut(musicSource));
+                StartCoroutine(FadeIn(music1));
                 break;
             case 1:
-                musicSource.clip = music2;
-                break;
-            case 2:
-                musicSource.clip = music3;
+                StartCoroutine(FadeOut(musicSource));
+                StartCoroutine(FadeIn(music2));
                 break;
             default:
-                musicSource.clip = music3;
+                StartCoroutine(FadeOut(music1));
+                StartCoroutine(FadeOut(music2));
+                StartCoroutine(FadeIn(music3));
                 break;
         }
 

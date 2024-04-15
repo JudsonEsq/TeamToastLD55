@@ -16,6 +16,7 @@ public class BreakableObject : MonoBehaviour
     [SerializeField] private float debrisSpacing = 0.1f;
 
     [SerializeField] private bool isObjectiveItem = false;
+    public AudioClip breakSound;
 
     private bool breaking = false;
 
@@ -43,6 +44,13 @@ public class BreakableObject : MonoBehaviour
         if (objectiveHandler != null)
         {
             objectiveHandler.TargetBroken();
+        }
+
+        if(breakSound != null)
+        {
+            AudioSource source = gameObject.GetComponent<AudioSource>();
+            source.clip = breakSound;
+            source.Play();
         }
         
         Vector3 finalPos = transform.position;
