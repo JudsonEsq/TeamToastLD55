@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -458,18 +458,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 649370227}
   m_CullTransparentMesh: 1
---- !u!114 &690240476 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3882539702511343899, guid: c1f38a8957c07a441af37b76c71c1b5a,
-    type: 3}
-  m_PrefabInstance: {fileID: 988515954}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c5864ce7ac21b348b93371599169833, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &883905610
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +470,7 @@ GameObject:
   - component: {fileID: 883905613}
   - component: {fileID: 883905612}
   - component: {fileID: 883905611}
+  - component: {fileID: 883905615}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -575,6 +564,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &883905615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 883905610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 766d76375ddfc7346a1ebe2f19146c8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &894998659
 GameObject:
   m_ObjectHideFlags: 0
@@ -1157,10 +1158,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 690240476}
-        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
-        m_MethodName: LoadMainMenu
-        m_Mode: 4
+      - m_Target: {fileID: 883905615}
+        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
+        m_MethodName: OpenMainMenu
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
