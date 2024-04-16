@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.3069224, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2279,8 +2279,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 2160184636306908765, guid: fd09baeaf3dbf5d498d45cc98312aaf1, type: 3}
+  - {fileID: 153392647983001009, guid: 2beb1434e54288640be015102e61a810, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &127705435 stripped
@@ -3534,8 +3534,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 2160184636306908765, guid: fd09baeaf3dbf5d498d45cc98312aaf1, type: 3}
+  - {fileID: 153392647983001009, guid: 2beb1434e54288640be015102e61a810, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &352057993
@@ -5080,8 +5080,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 2160184636306908765, guid: fd09baeaf3dbf5d498d45cc98312aaf1, type: 3}
+  - {fileID: 153392647983001009, guid: 2beb1434e54288640be015102e61a810, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!224 &520762749 stripped
@@ -5385,8 +5385,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: 37deccc3e39d727459a072607c24e0d6, type: 3}
+  - {fileID: 2160184636306908765, guid: 2fc24669c31ae5d44905304da544ac98, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &553558723
@@ -6233,8 +6233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: da96585ddb0e4b547865c76bdcbcdf04, type: 3}
+  - {fileID: 2160184636306908765, guid: 9d09bab4544815742ac0f16d2947ac57, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &731416701 stripped
@@ -9856,8 +9856,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: 37deccc3e39d727459a072607c24e0d6, type: 3}
+  - {fileID: 2160184636306908765, guid: 2fc24669c31ae5d44905304da544ac98, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &1240179915 stripped
@@ -11389,8 +11389,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: 37deccc3e39d727459a072607c24e0d6, type: 3}
+  - {fileID: 2160184636306908765, guid: 2fc24669c31ae5d44905304da544ac98, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1001 &1489973007
@@ -11903,8 +11903,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: 37deccc3e39d727459a072607c24e0d6, type: 3}
+  - {fileID: 2160184636306908765, guid: 2fc24669c31ae5d44905304da544ac98, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &1531444873 stripped
@@ -11927,8 +11927,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: 37deccc3e39d727459a072607c24e0d6, type: 3}
+  - {fileID: 2160184636306908765, guid: 2fc24669c31ae5d44905304da544ac98, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &1548608172
@@ -12435,8 +12435,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 2160184636306908765, guid: fd09baeaf3dbf5d498d45cc98312aaf1, type: 3}
+  - {fileID: 153392647983001009, guid: 2beb1434e54288640be015102e61a810, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &1616222995
@@ -15590,8 +15590,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: da96585ddb0e4b547865c76bdcbcdf04, type: 3}
+  - {fileID: 2160184636306908765, guid: 9d09bab4544815742ac0f16d2947ac57, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &1974185243
@@ -15895,8 +15895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 153392647983001009, guid: da96585ddb0e4b547865c76bdcbcdf04, type: 3}
+  - {fileID: 2160184636306908765, guid: 9d09bab4544815742ac0f16d2947ac57, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &2004375899
@@ -16805,8 +16805,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakThreshold: 2
   debrisPrefabs:
-  - {fileID: 919132149155446097, guid: 1143559829c9f1041917c8834863411c, type: 3}
-  - {fileID: 919132149155446097, guid: 459e216f1f1414547ad0050dfa26d466, type: 3}
+  - {fileID: 2160184636306908765, guid: fd09baeaf3dbf5d498d45cc98312aaf1, type: 3}
+  - {fileID: 153392647983001009, guid: 2beb1434e54288640be015102e61a810, type: 3}
   debrisSpacing: 0.1
   isObjectiveItem: 0
 --- !u!1 &2078317413
