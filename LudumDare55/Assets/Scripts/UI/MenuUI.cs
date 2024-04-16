@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class MenuUI : MonoBehaviour
 {
+
+    private void Start()
+    {
+        Cursor.lockState = CursorLockMode.Confined;
+    }
+
     public void OpenMainMenu()
     {
         if (LevelManager.Instance == null) return;
