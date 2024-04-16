@@ -123,6 +123,9 @@ public class DynamicObjectMover : MonoBehaviour {
 			
 			// get the forward vector of the player
 			float forward = _movement.VerticalInput;
+			
+			// i don't care if i'm comparing a float to an int 
+			// fuck floating point precision 
 			if (forward == 1) {
 				actualGrabDistance = MinimumObjectDistanceMoving;
 			}
