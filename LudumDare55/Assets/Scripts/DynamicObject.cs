@@ -89,7 +89,7 @@ public class DynamicObject : MonoBehaviour {
 			OnCollisionHit.Invoke();
 		}
 		if (_lastSpeed >= SoundSpeedThreshold && source != null) {
-			source.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
+			source.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
 			source.Play();
 		}
 	}
